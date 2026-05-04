@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Fantasy Live Wallpapers - AnyWallpaper</title>
+    <meta name="description" content="Download premium 1080p fantasy live video wallpapers. Transform your desktop with highly stable, magical backgrounds and seamless looping mythical scenes.">
+    <meta name="keywords" content="fantasy live wallpaper, magical video background, mythical desktop wallpaper, enchanted forest animated background, seamless loop fantasy scenery">
+    <meta name="author" content="AnyWallpaper by BSR Studios">
+
+    <link rel="icon" type="image/png" href="/logo.png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #f4f7f6; color: #1e293b; line-height: 1.6; }
+
+        .icon { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(180deg); }
+
+        /* Navbar */
+        nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: #0f172a; text-decoration: none; }
+        nav .logo span { color: #2563eb; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links > a, .dropdown-btn { margin-left: 25px; color: #475569; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; cursor: pointer; border: none; background: none; font-size: 1rem; }
+        .nav-links > a:hover, .dropdown-btn:hover { color: #2563eb; }
+        .dropdown-btn .arrow { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s; }
+        .dropdown-btn.active .arrow { transform: rotate(180deg); }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 180px; box-shadow: 0px 10px 25px rgba(0,0,0,0.1); z-index: 1; border-radius: 12px; overflow: hidden; top: 120%; left: 15px; border: 1px solid #f1f5f9; }
+        .dropdown-content.show { display: block; }
+        .dropdown-content a { color: #475569; padding: 12px 20px; text-decoration: none; display: block; border-bottom: 1px solid #f8fafc; }
+        .dropdown-content a:hover { background-color: #eff6ff; color: #2563eb; padding-left: 25px; transition: 0.2s; }
+
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Top Minimal Header */
+        .page-header { background: #ffffff; padding: 30px; border-radius: 16px; margin-bottom: 30px; text-align: center; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .page-header h1 { font-size: 2.2rem; color: #0f172a; margin-bottom: 10px; }
+        .page-header p { font-size: 1.05rem; color: #64748b; max-width: 600px; margin: 0 auto; }
+
+        .bsr-horizontal-ad { width: 100%; max-width: 728px; margin: 25px auto; display: flex; align-items: center; justify-content: center; }
+
+        .category-layout { display: grid; grid-template-columns: 3fr 1fr; gap: 30px; align-items: start; margin-bottom: 40px; }
+        @media (max-width: 900px) { .category-layout { grid-template-columns: 1fr; } }
+
+        /* Real Wallpaper Grid */
+        .wallpaper-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .wallpaper-card { background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; display: flex; flex-direction: column; }
+        .wallpaper-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1); }
+        
+        .card-image { position: relative; height: 180px; width: 100%; background: #000; overflow: hidden; }
+        .card-image img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+        .wallpaper-card:hover .card-image img { opacity: 0.8; transform: scale(1.05); }
+        .badge { position: absolute; top: 10px; left: 10px; background: rgba(15, 23, 42, 0.8); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: bold; backdrop-filter: blur(4px); }
+        
+        .card-content { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-content h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 8px; line-height: 1.4; }
+        .card-content p { font-size: 0.85rem; color: #64748b; margin-bottom: 15px; flex-grow: 1; }
+        .card-btn { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; padding: 10px; text-align: center; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .wallpaper-card:hover .card-btn { background: #2563eb; color: white; border-color: #2563eb; }
+
+        /* Sidebar Widgets */
+        .widget { background: #ffffff; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .widget h3 { font-size: 1.2rem; color: #0f172a; margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        .category-list { display: flex; flex-direction: column; gap: 12px; }
+        .category-item { display: flex; align-items: center; text-decoration: none; padding: 8px; border-radius: 8px; transition: 0.3s; border: 1px solid transparent; }
+        .category-item:hover { background: #f8fafc; border-color: #e2e8f0; transform: translateX(5px); }
+        .category-item img { width: 50px; height: 35px; border-radius: 6px; object-fit: cover; margin-right: 12px; }
+        .category-item.active { background: #eff6ff; border-color: #bfdbfe; pointer-events: none; }
+        .category-name { color: #334155; font-weight: 500; font-size: 0.95rem; flex-grow: 1; }
+        .category-item.active .category-name { color: #2563eb; font-weight: bold; }
+
+        /* Bottom Enhanced SEO Article */
+        .bottom-seo-article { background: #ffffff; border-radius: 12px; padding: 35px; margin-top: 40px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .bottom-seo-article h2 { font-size: 1.6rem; color: #0f172a; margin-bottom: 15px; }
+        .bottom-seo-article h3 { font-size: 1.2rem; color: #1e293b; margin: 20px 0 10px; }
+        .bottom-seo-article p { color: #475569; font-size: 1rem; line-height: 1.7; margin-bottom: 15px; }
+
+        footer { background-color: #ffffff; border-top: 1px solid #e2e8f0; padding: 40px 20px; text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 40px; }
+        .footer-content { max-width: 1000px; margin: 0 auto; line-height: 1.7; }
+        .footer-links a { color: #475569; font-weight: 600; text-decoration: none; margin: 0 10px; }
+        .footer-links a:hover { color: #2563eb; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Any<span>Wallpaper</span></a>
+        <div class="nav-links">
+            <a href="/"><img src="/assets/icons/home.svg" alt="Home" class="icon"> Home</a>
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown(event)">
+                    <img src="/assets/icons/category.svg" alt="Categories" class="icon"> Categories <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content" id="categoryMenu">
+                    <a href="/nature/">Nature</a>
+                    <a href="/anime/">Anime</a>
+                    <a href="/cyberpunk/">Cyberpunk</a>
+                    <a href="/cars/">Cars & Vehicles</a>
+                    <a href="/gaming/">Gaming</a>
+                    <a href="/space/">Space</a>
+                    <a href="/fantasy/">Fantasy</a>
+                    <a href="/amoled/">AMOLED</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Clean, Minimal Header -->
+        <div class="page-header">
+            <h1>Fantasy Live Wallpapers</h1>
+            <p>Bring magic to your screen with highly stable, enchanting video backgrounds and mythical landscapes.</p>
+        </div>
+
+        <div class="bsr-horizontal-ad">
+            <script src="/banner.js"></script>
+        </div>
+
+        <div class="category-layout">
+            
+            <!-- LEFT: Wallpapers -->
+            <div class="main-content">
+                <div class="wallpaper-grid">
+                    
+                    <!-- Dummy Placeholder for Fantasy Wallpaper 1 -->
+                    <a href="#" class="wallpaper-card">
+                        <div class="card-image">
+                            <span class="badge">1080p</span>
+                            <img src="https://via.placeholder.com/300x180/1e293b/ffffff?text=Enchanted+Forest" alt="Enchanted Forest Live Wallpaper">
+                        </div>
+                        <div class="card-content">
+                            <h3>Enchanted Glowing Forest</h3>
+                            <p>Magical visual loop with minimal CPU footprint.</p>
+                            <div class="card-btn">Download Free</div>
+                        </div>
+                    </a>
+
+                    <!-- Dummy Placeholder for Fantasy Wallpaper 2 -->
+                    <a href="#" class="wallpaper-card">
+                        <div class="card-image">
+                            <span class="badge">1080p</span>
+                            <img src="https://via.placeholder.com/300x180/1e293b/ffffff?text=Mythical+Dragon" alt="Mythical Dragon Wallpaper">
+                        </div>
+                        <div class="card-content">
+                            <h3>Mythical Dragon Flight</h3>
+                            <p>Smooth performance optimized for entry-level PCs.</p>
+                            <div class="card-btn">Download Free</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- BOTTOM ENHANCED SEO ARTICLE -->
+                <div class="bottom-seo-article">
+                    <h2>Immerse Yourself in Magic with Fantasy Wallpapers</h2>
+                    <p>Escape reality and transform your digital workspace into a realm of magic and wonder. Our handpicked collection of <strong>fantasy live wallpapers</strong> brings mythical creatures, majestic castles, and enchanted forests right to your screen. If you are looking for a breathtaking <strong>magical video background</strong> that offers a perfect, seamless loop, this category is designed to fuel your imagination every time you look at your desktop.</p>
+                    
+                    <h3>Engineered for Efficiency and Smoothness</h3>
+                    <p>We believe that stunning <strong>mythical desktop wallpapers</strong> should never slow down your workflow or gaming experience. Every animated background hosted on AnyWallpaper is thoroughly optimized to ensure a highly stable and minimal CPU usage footprint. By delivering these scenes in an optimized 1080p format, we guarantee smooth performance across all devices, from high-end rendering machines to everyday budget PCs.</p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: Sidebar -->
+            <div class="sidebar">
+                
+                <div class="bsr-horizontal-ad" style="margin-top: 0;">
+                    <script src="/nativebanner.js"></script>
+                </div>
+
+                <div class="widget">
+                    <h3>Explore Categories</h3>
+                    <div class="category-list">
+                        <a href="/nature/" class="category-item">
+                            <img src="/assets/images/categories/nature-thumb.png" alt="Nature">
+                            <span class="category-name">Nature</span>
+                        </a>
+                        <a href="/anime/" class="category-item">
+                            <img src="/assets/images/categories/anime-thumb.png" alt="Anime">
+                            <span class="category-name">Anime</span>
+                        </a>
+                        <a href="/gaming/" class="category-item">
+                            <img src="/assets/images/categories/gaming-thumb.png" alt="Gaming">
+                            <span class="category-name">Gaming</span>
+                        </a>
+                        <a href="/space/" class="category-item">
+                            <img src="/assets/images/categories/space-thumb.png" alt="Space">
+                            <span class="category-name">Space</span>
+                        </a>
+                        <!-- Active Class added to Fantasy -->
+                        <a href="/fantasy/" class="category-item active">
+                            <img src="/assets/images/categories/fantasy-thumb.png" alt="Fantasy">
+                            <span class="category-name">Fantasy</span>
+                        </a>
+                        <a href="/amoled/" class="category-item">
+                            <img src="/assets/images/categories/amoled-thumb.png" alt="AMOLED">
+                            <span class="category-name">AMOLED</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bsr-horizontal-ad">
+            <script src="/banner.js"></script>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div style="margin-bottom: 15px;"><strong>AnyWallpaper by BSR Studios</strong> - Reliable, high-quality dynamic screen experiences globally.</div>
+            <div class="footer-links" style="margin-bottom: 15px;">
+                <a href="/info/privacy/">Privacy Policy</a> | 
+                <a href="/info/terms/">Terms Of Service</a> | 
+                <a href="/info/contact/">Contact Us</a> | 
+                <a href="https://anyvidwall.github.io" target="_blank">AnyVidWall App</a>
+            </div>
+            <div>&copy; 2021-2026 AnyWallpaper by BSR Studios. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById("categoryMenu");
+            const btn = document.querySelector(".dropdown-btn");
+            menu.classList.toggle("show");
+            btn.classList.toggle("active");
+        }
+        window.onclick = function(event) {
+            const menu = document.getElementById("categoryMenu");
+            const btn = document.querySelector(".dropdown-btn");
+            if (menu.classList.contains('show') && !event.target.closest('.dropdown')) {
+                menu.classList.remove('show');
+                btn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
