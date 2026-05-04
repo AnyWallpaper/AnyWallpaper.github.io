@@ -3,62 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnyWallpaper - Download 4K & 1080p Live Video Wallpapers</title>
-    <meta name="description" content="Download high-quality, optimized, and smooth live video wallpapers for your PC and mobile. Explore Nature, Anime, Cyberpunk, and Gaming categories.">
+    <title>AnyWallpaper - Download Free Live Wallpapers & Animated Backgrounds</title>
     
+    <!-- Heavy Broad SEO Meta Tags -->
+    <meta name="description" content="Download high-quality, free live wallpapers and animated backgrounds for PC and mobile. Enjoy highly stable, seamless moving video wallpapers engineered for smooth performance.">
+    <meta name="keywords" content="live wallpapers for PC, animated backgrounds download, free video wallpapers, moving desktop backgrounds, Windows live wallpaper, reliable live wallpapers, nature, anime, gaming, amoled">
+    <meta name="author" content="AnyWallpaper by BSR Studios">
+
+    <link rel="icon" type="image/png" href="/logo.png">
+
     <style>
         /* Global & Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
 
-        /* Icon Styling (Line Icons) */
+        /* Icon Styling */
         .icon { width: 20px; height: 20px; vertical-align: middle; margin-right: 8px; filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(180deg); }
         
-        /* Premium Sticky Navbar */
-        nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        /* Premium Sticky Navbar with Dropdown */
+        nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
         nav .logo { font-size: 1.5rem; font-weight: bold; color: #0f172a; text-decoration: none; }
         nav .logo span { color: #2563eb; }
-        nav .links a { margin-left: 25px; color: #475569; text-decoration: none; font-weight: 500; transition: 0.3s; display: inline-flex; align-items: center; }
-        nav .links a:hover { color: #2563eb; }
+        
+        .nav-links { display: flex; align-items: center; }
+        .nav-links > a, .dropdown-btn { margin-left: 25px; color: #475569; text-decoration: none; font-weight: 500; transition: 0.3s; display: inline-flex; align-items: center; cursor: pointer; border: none; background: none; font-size: 1rem; }
+        .nav-links > a:hover, .dropdown-btn:hover { color: #2563eb; }
+        .dropdown-btn .arrow { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s; }
+        .dropdown-btn.active .arrow { transform: rotate(180deg); }
+        
+        /* Dropdown Architecture */
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 180px; box-shadow: 0px 10px 25px rgba(0,0,0,0.1); z-index: 1; border-radius: 12px; overflow: hidden; top: 120%; left: 15px; border: 1px solid #f1f5f9; opacity: 0; transform: translateY(-10px); transition: opacity 0.2s, transform 0.2s; }
+        .dropdown-content.show { display: block; opacity: 1; transform: translateY(0); }
+        .dropdown-content a { color: #475569; padding: 12px 20px; text-decoration: none; display: block; border-bottom: 1px solid #f8fafc; transition: background 0.2s; }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: #eff6ff; color: #2563eb; padding-left: 25px; }
 
         /* Main Container */
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 
         /* Hero Section */
-        .hero { text-align: center; margin-bottom: 40px; }
-        .hero h1 { font-size: 2.8rem; color: #0f172a; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto; }
-
-        /* Ad Formatting (BSR Rules) */
-        .bsr-horizontal-ad { width: 100%; max-width: 728px; min-height: 90px; background-color: #f1f5f9; border: 1px dashed #cbd5e1; margin: 30px auto; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
-        .ad-label { color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+        .hero { text-align: center; margin-bottom: 50px; background: linear-gradient(135deg, #0f172a, #1e293b); color: white; padding: 60px 20px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 700px; margin: 0 auto; }
 
         /* Category Grid Architecture */
-        .category-section h2 { margin-bottom: 20px; font-size: 1.8rem; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .category-section h2 { margin-bottom: 25px; font-size: 1.8rem; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; margin-bottom: 50px; }
         
-        .category-card { position: relative; border-radius: 16px; overflow: hidden; height: 200px; background-color: #e2e8f0; text-decoration: none; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.3s ease; display: block; }
-        .category-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .category-card { position: relative; border-radius: 16px; overflow: hidden; height: 180px; background-color: #e2e8f0; text-decoration: none; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.3s ease; display: block; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px -5px rgba(0,0,0,0.15); }
         
         /* Thumbnail Setup */
-        .category-card img { width: 100%; height: 100%; object-fit: cover; }
-        /* Gradient Overlay for Text Readability */
-        .category-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.1) 100%); display: flex; align-items: flex-end; padding: 20px; }
-        .category-overlay h3 { color: #ffffff; font-size: 1.5rem; margin: 0; }
+        .category-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+        .category-card:hover img { transform: scale(1.05); }
+        /* Gradient Overlay */
+        .category-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.1) 100%); display: flex; align-items: flex-end; padding: 20px; }
+        .category-overlay h3 { color: #ffffff; font-size: 1.4rem; margin: 0; font-weight: 600; }
 
-        /* Professional Master SEO Article Block */
-        .master-seo-article { background-color: #ffffff; border-radius: 16px; padding: 40px; margin-top: 50px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; }
+        /* Professional Master SEO Article Block (Broad Intent) */
+        .master-seo-article { background-color: #ffffff; border-radius: 16px; padding: 40px; margin-top: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; }
         .master-seo-article h2 { font-size: 2rem; color: #0f172a; margin-bottom: 20px; }
         .master-seo-article h3 { font-size: 1.4rem; color: #1e293b; margin: 25px 0 10px 0; }
-        .master-seo-article p { color: #475569; font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; }
-        .master-seo-article ul { margin-left: 20px; color: #475569; margin-bottom: 15px; }
+        .master-seo-article p { color: #475569; font-size: 1.05rem; margin-bottom: 15px; line-height: 1.8; }
+        .master-seo-article ul { margin-left: 20px; color: #475569; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
         .master-seo-article li { margin-bottom: 8px; }
 
         /* Premium Footer */
         footer { background-color: #ffffff; border-top: 1px solid #e2e8f0; padding: 50px 20px 30px; margin-top: 50px; }
-        .footer-content { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+        .footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
         .footer-brand h4 { font-size: 1.4rem; color: #0f172a; margin-bottom: 10px; }
-        .footer-brand p { color: #64748b; font-size: 0.95rem; max-width: 300px; }
+        .footer-brand p { color: #64748b; font-size: 0.95rem; max-width: 300px; line-height: 1.6; }
         
         .footer-links-group h5 { font-size: 1.1rem; color: #0f172a; margin-bottom: 15px; }
         .footer-links-group a { display: block; color: #64748b; text-decoration: none; margin-bottom: 10px; transition: 0.3s; }
@@ -69,104 +84,123 @@
 </head>
 <body>
 
+    <!-- Premium Navbar -->
     <nav>
         <a href="/" class="logo">Any<span>Wallpaper</span></a>
-        <div class="links">
+        <div class="nav-links">
             <a href="/"><img src="/assets/icons/home.svg" alt="Home" class="icon"> Home</a>
-            <a href="/nature/"><img src="/assets/icons/category.svg" alt="Categories" class="icon"> Categories</a> 
+            
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown(event)">
+                    <img src="/assets/icons/category.svg" alt="Categories" class="icon"> Categories <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content" id="categoryMenu">
+                    <a href="/nature/">Nature</a>
+                    <a href="/anime/">Anime</a>
+                    <a href="/cyberpunk/">Cyberpunk</a>
+                    <a href="/cars/">Cars & Vehicles</a>
+                    <a href="/gaming/">Gaming</a>
+                    <a href="/space/">Space</a>
+                    <a href="/fantasy/">Fantasy</a>
+                    <a href="/amoled/">AMOLED</a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <div class="container">
         
+        <!-- Hero Section (No Ads Here) -->
         <header class="hero">
             <h1>Upgrade Your Screen Dynamically</h1>
-            <p>Download the most optimized, highly stable live video wallpapers. Built for smooth performance on any hardware.</p>
+            <p>Download highly stable, flawlessly looped live video wallpapers. Built for smooth performance on any PC or mobile hardware.</p>
         </header>
 
-        <div class="bsr-horizontal-ad">
-            <span class="ad-label">Advertisement 1 (Top Banner)</span>
-        </div>
-
+        <!-- Categories Grid Section -->
         <section class="category-section">
             <h2>Explore Categories</h2>
             
             <div class="category-grid">
-                <!-- Image sources updated to .png -->
+                
                 <a href="/nature/" class="category-card">
                     <img src="/assets/images/categories/nature-thumb.png" alt="Nature Live Wallpapers">
-                    <div class="category-overlay">
-                        <h3>Nature</h3>
-                    </div>
+                    <div class="category-overlay"><h3>Nature</h3></div>
                 </a>
 
                 <a href="/anime/" class="category-card">
-                    <img src="/assets/images/categories/anime-thumb.png" alt="Anime Live Wallpapers">
-                    <div class="category-overlay">
-                        <h3>Anime</h3>
-                    </div>
-                </a>
-
-                <a href="/cyberpunk/" class="category-card">
-                    <img src="/assets/images/categories/cyberpunk-thumb.png" alt="Cyberpunk Live Wallpapers">
-                    <div class="category-overlay">
-                        <h3>Cyberpunk</h3>
-                    </div>
-                </a>
-
-                <a href="/cars/" class="category-card">
-                    <img src="/assets/images/categories/cars-thumb.png" alt="Cars Live Wallpapers">
-                    <div class="category-overlay">
-                        <h3>Cars & Vehicles</h3>
-                    </div>
+                    <img src="/assets/images/categories/anime-thumb.png" alt="Anime Animated Backgrounds">
+                    <div class="category-overlay"><h3>Anime</h3></div>
                 </a>
 
                 <a href="/gaming/" class="category-card">
-                    <img src="/assets/images/categories/gaming-thumb.png" alt="Gaming Live Wallpapers">
-                    <div class="category-overlay">
-                        <h3>Gaming</h3>
-                    </div>
+                    <img src="/assets/images/categories/gaming-thumb.png" alt="Gaming Video Backgrounds">
+                    <div class="category-overlay"><h3>Gaming</h3></div>
                 </a>
+
+                <a href="/space/" class="category-card">
+                    <img src="/assets/images/categories/space-thumb.png" alt="Space Live Wallpapers">
+                    <div class="category-overlay"><h3>Space</h3></div>
+                </a>
+
+                <a href="/cyberpunk/" class="category-card">
+                    <img src="/assets/images/categories/cyberpunk-thumb.png" alt="Cyberpunk Moving Backgrounds">
+                    <div class="category-overlay"><h3>Cyberpunk</h3></div>
+                </a>
+
+                <a href="/fantasy/" class="category-card">
+                    <img src="/assets/images/categories/fantasy-thumb.png" alt="Fantasy Animated Wallpapers">
+                    <div class="category-overlay"><h3>Fantasy</h3></div>
+                </a>
+
+                <a href="/cars/" class="category-card">
+                    <img src="/assets/images/categories/cars-thumb.png" alt="Cars and Vehicles Video Wallpapers">
+                    <div class="category-overlay"><h3>Cars & Vehicles</h3></div>
+                </a>
+
+                <a href="/amoled/" class="category-card">
+                    <img src="/assets/images/categories/amoled-thumb.png" alt="AMOLED True Black Live Wallpapers">
+                    <div class="category-overlay"><h3>AMOLED</h3></div>
+                </a>
+
             </div>
         </section>
 
-        <div class="bsr-horizontal-ad">
-            <span class="ad-label">Advertisement 2 (Native Banner)</span>
-        </div>
-
+        <!-- Broad SEO Article Section (Targeting "Live Wallpaper" organically) -->
         <article class="master-seo-article">
-            <h2>Why Choose AnyWallpaper for Live Backgrounds?</h2>
-            <p>Finding the perfect background for your desktop or mobile device can completely change your digital experience. At AnyWallpaper, we specialize in delivering highly stable and fully optimized video wallpapers that breathe life into your screens without compromising your device's performance.</p>
+            <h2>Your Reliable Source for Free Live Wallpapers</h2>
+            <p>Finding the perfect background for your setup can completely transform your digital workspace. Whether you are searching for a relaxing way to customize your desktop, or you want high-quality <strong>moving desktop backgrounds</strong> to match your RGB setup, AnyWallpaper delivers. We provide a massive library of meticulously crafted <strong>live wallpapers for PC</strong> and mobile devices, bringing dynamic motion to your screens without slowing down your system.</p>
             
-            <h3>Optimized for Every Setup</h3>
-            <p>One of the biggest concerns with animated backgrounds is resource consumption. We engineer our files to maintain a minimal CPU usage footprint. Whether you are using a high-end gaming rig or a budget PC, our wallpapers provide smooth performance without causing lag or overheating.</p>
+            <h3>Engineered for Smooth Performance</h3>
+            <p>One of the most common issues with <strong>animated backgrounds</strong> is that they consume too much system memory, causing lag during gaming or heavy workloads. At BSR Studios, we have solved this. Every video file hosted on our platform is strictly engineered to maintain a minimal CPU usage footprint. This means you get a highly stable visual experience that runs flawlessly, even on budget PCs and entry-level laptops.</p>
             
-            <h3>High-Fidelity Visuals</h3>
+            <h3>A Category for Every Vibe</h3>
             <ul>
-                <li><strong>4K UHD Resolution:</strong> Crisp, clear, and perfect for large monitors.</li>
-                <li><strong>1080p Full HD:</strong> The perfect balance of quality and file size.</li>
-                <li><strong>720p Mobile Optimized:</strong> Save bandwidth and battery life on smaller screens.</li>
+                <li><strong>Immersive Environments:</strong> Bring the outdoors inside with our calming Nature scenes or explore the universe with Space backgrounds.</li>
+                <li><strong>Pop Culture & Media:</strong> Download seamlessly looped Anime sequences and action-packed Gaming wallpapers.</li>
+                <li><strong>Aesthetic Designs:</strong> Perfect your setup with futuristic Cyberpunk cityscapes or battery-saving, true black AMOLED wallpapers.</li>
             </ul>
 
-            <p>Our library includes everything from calming <strong>Nature</strong> scenes and energetic <strong>Anime</strong> loops, to futuristic <strong>Cyberpunk</strong> cityscapes and high-octane <strong>Cars</strong>. Elevate your aesthetic today, completely free.</p>
+            <p>Experience the next generation of screen customization. Browse our categories above, select your favorite 1080p resolution file, and enjoy highly efficient, beautiful <strong>free video wallpapers</strong> today.</p>
         </article>
 
     </div>
 
+    <!-- Complete Professional Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
                 <h4>AnyWallpaper</h4>
-                <p>A BSR Studios Project. Providing reliable, high-quality dynamic screen experiences globally.</p>
+                <p>A BSR Studios Project. Providing reliable, high-quality dynamic screen experiences globally. Optimized for smooth performance and minimal system impact.</p>
             </div>
             
             <div class="footer-links-group">
                 <h5>Our Network</h5>
-                <a href="https://anyvidwall.github.io" target="_blank">AnyVidWall Software</a>
-                <a href="#">AnyWebWall</a>
+                <a href="https://anyvidwall.github.io" target="_blank">AnyVidWall Desktop App</a>
+                <a href="https://anywebwall.github.io" target="_blank">AnyWebWall Platform</a>
                 <a href="#">BSR Studios Home</a>
             </div>
 
+            <!-- Pretty URL Legal Links -->
             <div class="footer-links-group">
                 <h5>Legal & Info</h5>
                 <a href="/info/privacy/">Privacy Policy</a>
@@ -180,5 +214,23 @@
         </div>
     </footer>
 
+    <script>
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById("categoryMenu");
+            const btn = document.querySelector(".dropdown-btn");
+            menu.classList.toggle("show");
+            btn.classList.toggle("active");
+        }
+
+        window.onclick = function(event) {
+            const menu = document.getElementById("categoryMenu");
+            const btn = document.querySelector(".dropdown-btn");
+            if (menu.classList.contains('show') && !event.target.closest('.dropdown')) {
+                menu.classList.remove('show');
+                btn.classList.remove('active');
+            }
+        }
+    </script>
 </body>
 </html>
