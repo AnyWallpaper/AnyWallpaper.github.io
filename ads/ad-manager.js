@@ -1,16 +1,8 @@
 // ==========================
-// ADSTERRA AD MANAGER (PRO FIX)
+// ADSTERRA AD MANAGER (Clean & User Friendly)
 // ==========================
 
-// 1. Social Bar (Pop-up Notification Type)
-function loadSocialBar() {
-    const script = document.createElement('script');
-    script.src = "https://pl29387755.profitablecpmratenetwork.com/85/1d/79/851d794572b70be8caaaedcfe7d6f862.js";
-    script.async = true;
-    document.body.appendChild(script);
-}
-
-// 2. Native Banner Injector (Article ke niche wala)
+// 1. Native Banner Injector (Article ke niche wala)
 function injectNativeAds() {
     const adSpots = document.querySelectorAll('.ad-native-placeholder');
     adSpots.forEach(spot => {
@@ -26,7 +18,7 @@ function injectNativeAds() {
     });
 }
 
-// 3. Normal Banner 728x90 (Download ke niche ya Footer ke pass)
+// 2. Normal Banner 728x90 (Download ke niche ya Footer ke pass)
 function injectNormalBanner() {
     const bannerSpots = document.querySelectorAll('.ad-banner-placeholder');
     bannerSpots.forEach(spot => {
@@ -53,7 +45,6 @@ function injectNormalBanner() {
 document.addEventListener("DOMContentLoaded", () => {
     // 1.5 second ka delay taaki teri website aur video pehle load ho jaye (User experience ke liye best)
     setTimeout(() => {
-        loadSocialBar();
         injectNativeAds();
         injectNormalBanner();
     }, 1500);
