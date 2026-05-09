@@ -65,15 +65,29 @@ header {
 .dropdown:hover .dropdown-content { display: block; }
 
 /* ==========================
-   WALLPAPER CARDS & FOOTER
+   WALLPAPER CARDS (Reusable & Minimal)
 ========================== */
-.wallpaper-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.wallpaper-card { overflow: hidden; border-radius: 28px; background: #0f0f0f; border: 1px solid rgba(255,255,255,0.06); transition: 0.4s; position: relative; height: 100%; }
-.wallpaper-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
-.wallpaper-image img { height: 240px; object-fit: cover; }
-.wallpaper-content { padding: 25px; }
-.card-title { font-size: 24px; margin-bottom: 14px; }
-.card-btn { display: block; width: 100%; text-align: center; padding: 15px; border-radius: 18px; background: linear-gradient(135deg, var(--accent), var(--accent-hover)); font-weight: bold; }
+/* 4 Cards per row ke liye size 250px kiya gaya hai */
+.wallpaper-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+
+.wallpaper-card { 
+    overflow: hidden; 
+    border-radius: 20px; 
+    background: #0f0f0f; 
+    border: 1px solid rgba(255,255,255,0.06); 
+    transition: 0.4s; 
+    display: flex; 
+    flex-direction: column; 
+}
+.wallpaper-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); box-shadow: 0 0 35px var(--accent-glow); }
+
+.wallpaper-image { position: relative; overflow: hidden; }
+.wallpaper-image img { height: 200px; object-fit: cover; transition: 0.5s; }
+.wallpaper-card:hover img { transform: scale(1.08); }
+
+/* Content ko center kiya aur sirf title ke liye clean banaya */
+.wallpaper-content { padding: 20px 15px; text-align: center; }
+.card-title { font-size: 18px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 footer { padding: 90px 0 40px; background: #030303; border-top: 1px solid rgba(255,255,255,0.06); }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
