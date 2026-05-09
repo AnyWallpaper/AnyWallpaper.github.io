@@ -1,0 +1,105 @@
+/* ==========================
+   CATEGORY HERO SECTION
+========================== */
+.category-hero {
+    position: relative;
+    width: 100%;
+    
+    /* FIXED: Dabbe ko teri image ka exact shape de diya */
+    aspect-ratio: 1672 / 941; 
+    
+    /* Agar screen bohot badi ho toh usko page se bahar jane se rokne ke liye */
+    max-height: 85vh; 
+    
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0; 
+    padding: 0; 
+    border-radius: 0 0 40px 40px; 
+    
+    /* Ab dabba bhi usi shape ka hai toh 'cover' bilkul perfect fit hoga bina kate */
+    background-size: cover !important; 
+    background-position: center !important; 
+}
+
+/* Background image handling */
+.category-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 40px 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 58px);
+    margin-bottom: 18px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    color: #bfbfbf;
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 750px;
+}
+
+/* Background image handling */
+.category-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 40px 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    color: #bfbfbf;
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 750px;
+}
+
+/* ==========================
+   SEO CONTENT & GRID
+========================== */
+.seo-content {
+    background: #0d0d0d;
+    padding: 45px;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+    margin-top: 40px;
+}
+
+.seo-content h2 { font-size: 32px; margin-bottom: 20px; color: var(--accent); }
+.seo-content p { color: #b3b3b3; line-height: 1.9; margin-bottom: 15px; }
+
+/* ==========================
+   MOBILE RESPONSIVENESS
+========================== */
+@media(max-width: 900px) {
+    .hero-content h1 { font-size: 44px; }
+}
+@media(max-width: 600px) {
+    .category-hero { min-height: 45vh; }
+    .hero-content h1 { font-size: 34px; }
+}

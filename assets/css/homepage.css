@@ -1,0 +1,49 @@
+/* ==========================
+   HOMEPAGE HERO SECTION
+========================== */
+.hero { 
+    position: relative; 
+    min-height: calc(100vh - 80px); /* Navbar ki height minus kar di taaki perfect screen pe fit aaye */
+    margin-top: 80px; /* Image ko exactly navbar ke neeche se shuru karne ke liye */
+    display: flex; 
+    align-items: center; 
+    overflow: hidden; 
+}
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.96)), url('../images/hero-banner.jpg') center/cover no-repeat; z-index: -2; transform: scale(1.08); }
+.hero::after { content: ""; position: absolute; width: 600px; height: 600px; background: var(--accent); filter: blur(180px); opacity: 0.15; border-radius: 50%; top: -150px; right: -150px; z-index: -1; }
+.hero-content { max-width: 850px; padding-top: 20px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); margin-bottom: 30px; color: #d8d8d8; font-size: 14px; }
+.hero h1 { font-size: 82px; line-height: 1.1; margin-bottom: 25px; }
+.hero p { color: #bdbdbd; line-height: 1.9; font-size: 20px; max-width: 700px; }
+.hero-buttons { margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap; }
+.primary-btn { height: 65px; padding: 0 34px; border-radius: 22px; background: linear-gradient(135deg, var(--accent), var(--accent-hover)); display: flex; align-items: center; justify-content: center; font-weight: bold; transition: 0.3s; }
+.primary-btn:hover { transform: translateY(-4px); }
+.secondary-btn { height: 65px; padding: 0 34px; border-radius: 22px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(20px); transition: 0.3s; }
+.secondary-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ==========================
+   CATEGORIES GRID
+========================== */
+.categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+.category-card { position: relative; overflow: hidden; border-radius: 28px; min-height: 320px; display: flex; align-items: flex-end; padding: 30px; border: 1px solid rgba(255,255,255,0.08); transition: 0.4s; }
+.category-card:hover { transform: translateY(-8px); }
+.category-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)); z-index: 1; }
+.category-card img { position: absolute; inset: 0; height: 100%; object-fit: cover; z-index: 0; transition: 0.5s; }
+.category-card:hover img { transform: scale(1.08); }
+.category-content { position: relative; z-index: 2; }
+.category-content h3 { font-size: 32px; margin-bottom: 12px; }
+.category-content p { color: #d0d0d0; line-height: 1.7; }
+
+/* ==========================
+   FEATURES & FAQ
+========================== */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.feature-box { background: #0d0d0d; padding: 40px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.06); transition: 0.4s; }
+.feature-box:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
+.feature-box h3 { font-size: 28px; margin-bottom: 18px; }
+.faq-grid { display: grid; gap: 25px; }
+.faq-item { background: #0d0d0d; padding: 35px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.06); }
+.faq-item h3 { font-size: 26px; margin-bottom: 16px; }
+
+@media(max-width: 900px) { .hero h1 { font-size: 54px; } }
+@media(max-width: 600px) { .hero h1 { font-size: 42px; } .hero p { font-size: 17px; } }
