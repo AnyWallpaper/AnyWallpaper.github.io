@@ -1,216 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Contact Us - AnyWallpaper</title>
-    <meta name="description" content="Get in touch with AnyWallpaper by BSR Studios. We are here to help with wallpaper requests, software support, or business inquiries.">
-    <meta name="keywords" content="Contact AnyWallpaper, BSR Studios support, wallpaper request, bug report, AnyVidWall help">
-    <meta name="author" content="AnyWallpaper by BSR Studios">
 
-    <link rel="icon" type="image/png" href="/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* Modern Premium Light Theme */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+<title>Contact - AnyWallpaper</title>
 
-        .icon { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(180deg); }
+<meta name="description" content="Contact AnyWallpaper for support, copyright issues, wallpaper requests or business inquiries.">
 
-        /* Premium Navbar */
-        nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        nav .logo { font-size: 1.5rem; font-weight: bold; color: #0f172a; text-decoration: none; }
-        nav .logo span { color: #2563eb; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links > a, .dropdown-btn { margin-left: 25px; color: #475569; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; cursor: pointer; border: none; background: none; font-size: 1rem; }
-        .nav-links > a:hover, .dropdown-btn:hover { color: #2563eb; }
-        .dropdown-btn .arrow { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s; }
-        .dropdown-btn.active .arrow { transform: rotate(180deg); }
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 180px; box-shadow: 0px 10px 25px rgba(0,0,0,0.1); z-index: 1; border-radius: 12px; overflow: hidden; top: 120%; left: 15px; border: 1px solid #f1f5f9; }
-        .dropdown-content.show { display: block; }
-        .dropdown-content a { color: #475569; padding: 12px 20px; text-decoration: none; display: block; border-bottom: 1px solid #f8fafc; }
-        .dropdown-content a:hover { background-color: #eff6ff; color: #2563eb; padding-left: 25px; transition: 0.2s; }
+<meta name="robots" content="index, follow">
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        
-        /* Header */
-        .page-header { text-align: center; margin-bottom: 40px; }
-        .page-header h1 { font-size: 2.5rem; color: #0f172a; margin-bottom: 10px; }
-        .page-header p { font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto; }
+<meta name="theme-color" content="#050505">
 
-        /* Contact Grid */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; margin-bottom: 50px; }
-        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+<link rel="canonical" href="https://anywallpaper.github.io/info/contact/">
 
-        /* Left: Contact Info */
-        .contact-info { background: #ffffff; border-radius: 16px; padding: 40px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .contact-info h2 { color: #0f172a; font-size: 1.6rem; margin-bottom: 20px; border-left: 4px solid #2563eb; padding-left: 15px; }
-        .contact-info p { color: #475569; margin-bottom: 30px; font-size: 1.05rem; }
-        
-        .info-block { margin-bottom: 25px; }
-        .info-block h4 { color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .info-block p { color: #1e293b; font-size: 1.1rem; font-weight: 600; }
-        .info-block a { color: #2563eb; text-decoration: none; transition: 0.3s; }
-        .info-block a:hover { color: #1d4ed8; text-decoration: underline; }
+<!-- Open Graph -->
 
-        /* Right: Web3Forms */
-        .contact-form { background: #ffffff; border-radius: 16px; padding: 40px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; color: #475569; margin-bottom: 8px; font-size: 0.95rem; font-weight: 500; }
-        .form-group input, .form-group textarea { width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 15px; color: #1e293b; font-size: 1rem; outline: none; transition: 0.3s; }
-        .form-group input:focus, .form-group textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); background: #ffffff; }
-        .form-group textarea { resize: vertical; min-height: 150px; }
-        
-        .btn-submit { display: inline-block; background: #2563eb; color: white; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: 0.3s; width: 100%; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2); }
-        .btn-submit:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3); }
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact - AnyWallpaper">
+<meta property="og:description" content="Get in touch with AnyWallpaper">
+<meta property="og:url" content="https://anywallpaper.github.io/info/contact/">
 
-        /* Bottom SEO Article */
-        .content-section { background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .content-section h3 { color: #0f172a; font-size: 1.6rem; margin-bottom: 20px; }
-        .content-section p { color: #475569; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.7; }
-        .content-section ul { padding-left: 20px; color: #475569; font-size: 1.05rem; margin-bottom: 20px; line-height: 1.7; }
-        .content-section li { margin-bottom: 10px; }
-        .content-section strong { color: #1e293b; }
+<style>
 
-        /* Premium Footer */
-        footer { background-color: #ffffff; border-top: 1px solid #e2e8f0; padding: 40px 20px; text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 50px; }
-        .footer-content { max-width: 1000px; margin: 0 auto; line-height: 1.7; }
-        .footer-links a { color: #475569; font-weight: 600; text-decoration: none; margin: 0 10px; transition: 0.3s; }
-        .footer-links a:hover { color: #2563eb; }
-    </style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#ffffff;
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:auto;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#00d26a;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+}
+
+.nav-links a{
+  color:#cfcfcf;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#00d26a;
+}
+
+.hero{
+  padding:130px 0 70px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:#00d26a;
+  filter:blur(160px);
+  opacity:0.12;
+  border-radius:50%;
+  top:-120px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.hero h1{
+  position:relative;
+  z-index:2;
+  font-size:70px;
+  margin-bottom:25px;
+}
+
+.hero p{
+  position:relative;
+  z-index:2;
+  color:#b5b5b5;
+  line-height:1.9;
+  font-size:18px;
+  max-width:760px;
+  margin:auto;
+}
+
+.contact-section{
+  padding:20px 0 100px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.contact-box{
+  background:#0d0d0d;
+  border-radius:32px;
+  padding:45px;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.contact-box h2{
+  font-size:34px;
+  margin-bottom:25px;
+}
+
+.contact-box p{
+  color:#b5b5b5;
+  line-height:2;
+  margin-bottom:25px;
+}
+
+.contact-info{
+  display:grid;
+  gap:20px;
+}
+
+.info-item{
+  padding:22px;
+  border-radius:22px;
+  background:#131313;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.info-item strong{
+  display:block;
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+.info-item span{
+  color:#b3b3b3;
+  line-height:1.8;
+}
+
+.form-group{
+  margin-bottom:25px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:12px;
+  color:#d4d4d4;
+}
+
+.form-control{
+  width:100%;
+  background:#131313;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;
+  padding:18px 20px;
+  color:#ffffff;
+  font-size:16px;
+  outline:none;
+}
+
+.form-control:focus{
+  border-color:#00d26a;
+}
+
+textarea.form-control{
+  resize:none;
+  min-height:160px;
+}
+
+.submit-btn{
+  width:100%;
+  height:62px;
+  border:none;
+  border-radius:20px;
+  background:linear-gradient(135deg,#00d26a,#008643);
+  color:#ffffff;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.submit-btn:hover{
+  transform:translateY(-4px);
+}
+
+footer{
+  padding:80px 0 40px;
+  background:#030303;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-top:20px;
+}
+
+.footer-links a{
+  color:#9d9d9d;
+}
+
+.footer-links a:hover{
+  color:#00d26a;
+}
+
+.copyright{
+  margin-top:50px;
+  text-align:center;
+  color:#707070;
+  font-size:14px;
+}
+
+@media(max-width:1000px){
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .contact-box{
+    padding:30px;
+  }
+
+  .contact-box h2{
+    font-size:28px;
+  }
+
+}
+
+</style>
+
 </head>
 <body>
 
-    <nav>
-        <a href="/" class="logo">Any<span>Wallpaper</span></a>
-        <div class="nav-links">
-            <a href="/"><img src="/assets/icons/home.svg" alt="Home" class="icon"> Home</a>
-            <div class="dropdown">
-                <button class="dropdown-btn" onclick="toggleDropdown(event)">
-                    <img src="/assets/icons/category.svg" alt="Categories" class="icon"> Categories <span class="arrow">▼</span>
-                </button>
-                <div class="dropdown-content" id="categoryMenu">
-                    <a href="/nature/">Nature</a>
-                    <a href="/anime/">Anime</a>
-                    <a href="/cyberpunk/">Cyberpunk</a>
-                    <a href="/cars/">Cars & Vehicles</a>
-                    <a href="/gaming/">Gaming</a>
-                    <a href="/space/">Space</a>
-                    <a href="/fantasy/">Fantasy</a>
-                    <a href="/amoled/">AMOLED</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<header>
 
-    <div class="container">
-        
-        <header class="page-header">
-            <h1>Get in Touch</h1>
-            <p>Have a question about our live wallpapers, found a bug in our software, or want to suggest a new category? We would love to hear from you.</p>
-        </header>
+<div class="container navbar">
 
-        <div class="contact-grid">
-            
-            <!-- Left: Contact Details -->
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>At AnyWallpaper by BSR Studios, we are dedicated to providing the best dynamic desktop experience. Feel free to reach out through the channels below.</p>
-                
-                <div class="info-block">
-                    <h4>Email Support</h4>
-                    <p><a href="mailto:aryanmewadastudios@gmail.com">aryanmewadastudios@gmail.com</a></p>
-                </div>
-                
-                <div class="info-block">
-                    <h4>Developer Network</h4>
-                    <p><a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer">github.com/BSR-Studios</a></p>
-                </div>
-                
-                <div class="info-block">
-                    <h4>Location</h4>
-                    <p>Madhya Pradesh<br>India</p>
-                </div>
-            </div>
+  <a href="/" class="logo">
+    Any<span>Wallpaper</span>
+  </a>
 
-            <!-- Right: Web3Forms Integration -->
-            <div class="contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    
-                    <!-- Web3Forms Access Key -->
-                    <input type="hidden" name="access_key" value="65e856c5-62e9-4707-ba73-712fd2b31a2e">
-                    
-                    <!-- Redirect back to Contact page after submission -->
-                    <input type="hidden" name="redirect" value="https://anywallpaper.github.io/info/contact/">
-                    <input type="hidden" name="subject" value="New Submission from AnyWallpaper Contact Form">
+  <nav class="nav-links">
 
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="How can we help you today?" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
-            </div>
+    <a href="/anime/">Anime</a>
+    <a href="/nature/">Nature</a>
+    <a href="/gaming/">Gaming</a>
+    <a href="/space/">Space</a>
+
+  </nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+  <h1>
+    Contact Us
+  </h1>
+
+  <p>
+
+    Contact AnyWallpaper for support, wallpaper requests, copyright concerns or business inquiries.
+
+  </p>
+
+</div>
+
+</section>
+
+<section class="contact-section">
+
+<div class="container">
+
+  <div class="contact-grid">
+
+    <div class="contact-box">
+
+      <h2>
+        Get In Touch
+      </h2>
+
+      <p>
+
+        We usually respond to inquiries related to wallpapers, copyright requests and support as quickly as possible.
+
+      </p>
+
+      <div class="contact-info">
+
+        <div class="info-item">
+
+          <strong>
+            Website
+          </strong>
+
+          <span>
+            https://anywallpaper.github.io/
+          </span>
 
         </div>
 
-        <!-- Bottom Support/SEO Article -->
-        <article class="content-section">
-            <h3>How We Can Help You</h3>
-            <p>At <strong>BSR Studios</strong>, our priority is ensuring that our users have a seamless, highly stable experience while customizing their screens. Whether you are using our web directory to find the perfect background, or utilizing our desktop software, we are here to support you.</p>
-            
-            <ul>
-                <li><strong>Wallpaper Requests:</strong> Can't find a specific animated background? Drop us a message with the game, anime, or nature scene you are looking for, and our team will work on adding a seamless loop of it to our library.</li>
-                <li><strong>Software Support & Bug Reports:</strong> If you experience any issues downloading files, or if you encounter bugs while using AnyVidWall or AnyWebWall, please let us know. Include your basic system details to help us troubleshoot efficiently.</li>
-                <li><strong>Business & Copyright Inquiries:</strong> For partnerships, content removals (DMCA), or collaboration requests, please ensure you leave a detailed message and a valid reply email.</li>
-            </ul>
-            
-            <p><strong>Response Time:</strong> Our standard response time is between 24 to 48 hours. We read every single email we receive and appreciate your patience as we work to improve the AnyWallpaper experience.</p>
-        </article>
+        <div class="info-item">
+
+          <strong>
+            Support Type
+          </strong>
+
+          <span>
+            Wallpaper Support, Copyright Requests, Business Inquiries
+          </span>
+
+        </div>
+
+        <div class="info-item">
+
+          <strong>
+            Availability
+          </strong>
+
+          <span>
+            Online Support Available Worldwide
+          </span>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div style="margin-bottom: 15px;"><strong>AnyWallpaper by BSR Studios</strong> - Reliable, high-quality dynamic screen experiences globally.</div>
-            <div class="footer-links" style="margin-bottom: 15px;">
-                <a href="/info/privacy/">Privacy Policy</a> | 
-                <a href="/info/terms/">Terms Of Service</a> | 
-                <a href="/info/contact/">Contact Us</a>
-            </div>
-            <div>&copy; 2021-2026 AnyWallpaper by BSR Studios. All rights reserved.</div>
-        </div>
-    </footer>
+    <div class="contact-box">
 
-    <script>
-        function toggleDropdown(event) {
-            event.stopPropagation();
-            const menu = document.getElementById("categoryMenu");
-            const btn = document.querySelector(".dropdown-btn");
-            menu.classList.toggle("show");
-            btn.classList.toggle("active");
-        }
-        window.onclick = function(event) {
-            const menu = document.getElementById("categoryMenu");
-            const btn = document.querySelector(".dropdown-btn");
-            if (menu.classList.contains('show') && !event.target.closest('.dropdown')) {
-                menu.classList.remove('show');
-                btn.classList.remove('active');
-            }
-        }
-    </script>
+      <h2>
+        Send Message
+      </h2>
+
+      <form>
+
+        <div class="form-group">
+
+          <label>
+            Full Name
+          </label>
+
+          <input
+          type="text"
+          class="form-control"
+          placeholder="Enter your name">
+
+        </div>
+
+        <div class="form-group">
+
+          <label>
+            Email Address
+          </label>
+
+          <input
+          type="email"
+          class="form-control"
+          placeholder="Enter your email">
+
+        </div>
+
+        <div class="form-group">
+
+          <label>
+            Message
+          </label>
+
+          <textarea
+          class="form-control"
+          placeholder="Write your message"></textarea>
+
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+  <div class="footer-grid">
+
+    <div>
+
+      <h3 class="logo">
+        Any<span>Wallpaper</span>
+      </h3>
+
+      <p style="margin-top:20px;color:#9d9d9d;line-height:1.9;">
+
+        Premium live wallpapers for desktop PCs and gaming setups.
+
+      </p>
+
+    </div>
+
+    <div>
+
+      <h3>
+        Categories
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="/anime/">Anime</a>
+        <a href="/nature/">Nature</a>
+        <a href="/gaming/">Gaming</a>
+        <a href="/space/">Space</a>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <h3>
+        Information
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="/info/privacy/">Privacy Policy</a>
+        <a href="/info/terms/">Terms & Conditions</a>
+        <a href="/info/contact/">Contact</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 AnyWallpaper. All Rights Reserved.
+  </div>
+
+</div>
+
+</footer>
+
 </body>
 </html>

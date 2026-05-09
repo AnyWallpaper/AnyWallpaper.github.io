@@ -1,144 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Privacy Policy - AnyWallpaper</title>
-    <meta name="description" content="Privacy Policy for AnyWallpaper by BSR Studios. Learn how we handle your data, cookies, and advertising information.">
-    <meta name="robots" content="noindex, follow"> <!-- Legal pages ko index karna zaruri nahi hota, par follow zaruri hai -->
 
-    <link rel="icon" type="image/png" href="/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* Modern Premium Light Theme */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+  <title>Privacy Policy - AnyWallpaper</title>
 
-        .icon { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(180deg); }
+  <meta name="description" content="Read the Privacy Policy of AnyWallpaper and learn how user information is handled.">
 
-        /* Navbar */
-        nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        nav .logo { font-size: 1.5rem; font-weight: bold; color: #0f172a; text-decoration: none; }
-        nav .logo span { color: #2563eb; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links > a, .dropdown-btn { margin-left: 25px; color: #475569; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; cursor: pointer; border: none; background: none; font-size: 1rem; }
-        .nav-links > a:hover, .dropdown-btn:hover { color: #2563eb; }
-        .dropdown-btn .arrow { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s; }
-        .dropdown-btn.active .arrow { transform: rotate(180deg); }
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 180px; box-shadow: 0px 10px 25px rgba(0,0,0,0.1); z-index: 1; border-radius: 12px; overflow: hidden; top: 120%; left: 15px; border: 1px solid #f1f5f9; }
-        .dropdown-content.show { display: block; }
-        .dropdown-content a { color: #475569; padding: 12px 20px; text-decoration: none; display: block; border-bottom: 1px solid #f8fafc; }
-        .dropdown-content a:hover { background-color: #eff6ff; color: #2563eb; padding-left: 25px; transition: 0.2s; }
+  <meta name="robots" content="index, follow">
 
-        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-        
-        /* Legal Content Box */
-        .legal-box { background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .legal-box h1 { font-size: 2.2rem; color: #0f172a; margin-bottom: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; }
-        .last-updated { font-size: 0.9rem; color: #94a3b8; margin-bottom: 30px; display: block; }
-        
-        .legal-box h2 { font-size: 1.4rem; color: #1e293b; margin: 25px 0 15px; }
-        .legal-box p { color: #475569; font-size: 1.05rem; margin-bottom: 15px; line-height: 1.7; }
-        .legal-box ul { margin-left: 20px; color: #475569; margin-bottom: 15px; }
-        .legal-box li { margin-bottom: 8px; line-height: 1.7; }
-        .legal-box a { color: #2563eb; text-decoration: none; font-weight: 500; }
-        .legal-box a:hover { text-decoration: underline; }
+  <meta name="theme-color" content="#050505">
 
-        footer { background-color: #ffffff; border-top: 1px solid #e2e8f0; padding: 40px 20px; text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 50px; }
-        .footer-content { max-width: 1000px; margin: 0 auto; line-height: 1.7; }
-        .footer-links a { color: #475569; font-weight: 600; text-decoration: none; margin: 0 10px; }
-        .footer-links a:hover { color: #2563eb; }
-    </style>
+  <link rel="canonical" href="https://anywallpaper.github.io/info/privacy/">
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy - AnyWallpaper">
+  <meta property="og:description" content="Privacy Policy of AnyWallpaper">
+  <meta property="og:url" content="https://anywallpaper.github.io/info/privacy/">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:#ffffff;
+      font-family:Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:92%;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(0,0,0,0.75);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .navbar{
+      height:80px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+    }
+
+    .logo span{
+      color:#00d26a;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a{
+      color:#cfcfcf;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#00d26a;
+    }
+
+    .hero{
+      padding:130px 0 70px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:#00d26a;
+      filter:blur(160px);
+      opacity:0.12;
+      border-radius:50%;
+      top:-120px;
+      left:50%;
+      transform:translateX(-50%);
+    }
+
+    .hero h1{
+      position:relative;
+      z-index:2;
+      font-size:70px;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      position:relative;
+      z-index:2;
+      color:#b5b5b5;
+      line-height:1.9;
+      font-size:18px;
+      max-width:750px;
+      margin:auto;
+    }
+
+    .content-section{
+      padding:20px 0 100px;
+    }
+
+    .content-box{
+      background:#0d0d0d;
+      border-radius:32px;
+      padding:50px;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .content-box h2{
+      font-size:34px;
+      margin-bottom:20px;
+      margin-top:45px;
+    }
+
+    .content-box h2:first-child{
+      margin-top:0;
+    }
+
+    .content-box p{
+      color:#b5b5b5;
+      line-height:2;
+      margin-bottom:20px;
+      font-size:17px;
+    }
+
+    .content-box ul{
+      margin-left:20px;
+      margin-bottom:25px;
+    }
+
+    .content-box li{
+      color:#b5b5b5;
+      line-height:2;
+      margin-bottom:10px;
+    }
+
+    footer{
+      padding:80px 0 40px;
+      background:#030303;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .footer-links a{
+      color:#9d9d9d;
+    }
+
+    .footer-links a:hover{
+      color:#00d26a;
+    }
+
+    .copyright{
+      margin-top:50px;
+      text-align:center;
+      color:#707070;
+      font-size:14px;
+    }
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:50px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .content-box{
+        padding:30px;
+      }
+
+      .content-box h2{
+        font-size:28px;
+      }
+
+    }
+
+  </style>
+
 </head>
 <body>
 
-    <nav>
-        <a href="/" class="logo">Any<span>Wallpaper</span></a>
-        <div class="nav-links">
-            <a href="/"><img src="/assets/icons/home.svg" alt="Home" class="icon"> Home</a>
-            <div class="dropdown">
-                <button class="dropdown-btn" onclick="toggleDropdown(event)">
-                    <img src="/assets/icons/category.svg" alt="Categories" class="icon"> Categories <span class="arrow">▼</span>
-                </button>
-                <div class="dropdown-content" id="categoryMenu">
-                    <a href="/nature/">Nature</a>
-                    <a href="/anime/">Anime</a>
-                    <a href="/cyberpunk/">Cyberpunk</a>
-                    <a href="/cars/">Cars & Vehicles</a>
-                    <a href="/gaming/">Gaming</a>
-                    <a href="/space/">Space</a>
-                    <a href="/fantasy/">Fantasy</a>
-                    <a href="/amoled/">AMOLED</a>
-                </div>
-            </div>
-        </div>
+<header>
+
+  <div class="container navbar">
+
+    <a href="/" class="logo">
+      Any<span>Wallpaper</span>
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="/anime/">Anime</a>
+      <a href="/nature/">Nature</a>
+      <a href="/gaming/">Gaming</a>
+      <a href="/space/">Space</a>
+
     </nav>
 
-    <div class="container">
-        
-        <div class="legal-box">
-            <h1>Privacy Policy</h1>
-            <span class="last-updated">Last Updated: May 4, 2026</span>
+  </div>
 
-            <p>At AnyWallpaper, accessible from https://anywallpaper.github.io, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AnyWallpaper and how we use it.</p>
-            <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+</header>
 
-            <h2>Log Files & Analytics</h2>
-            <p>AnyWallpaper follows a standard procedure of using log files and download trackers. We utilize Cloudflare Workers to monitor anonymous download counts to understand which wallpapers are popular. The information collected includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, and tracking users' movement on the website.</p>
+<section class="hero">
 
-            <h2>Cookies and Web Beacons</h2>
-            <p>Like any other website, AnyWallpaper uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+  <div class="container">
 
-            <h2>Google DoubleClick DART Cookie</h2>
-            <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></p>
+    <h1>
+      Privacy Policy
+    </h1>
 
-            <h2>Advertising Partners Privacy Policies</h2>
-            <p>Third-party ad servers or ad networks (such as Google AdSense) use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on AnyWallpaper, which are sent directly to users' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
-            <p>Note that AnyWallpaper by BSR Studios has no access to or control over these cookies that are used by third-party advertisers.</p>
+    <p>
 
-            <h2>Third Party Privacy Policies</h2>
-            <p>AnyWallpaper's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
-            <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
+      Learn how AnyWallpaper collects, uses and protects user information while browsing our website and downloading wallpapers.
 
-            <h2>Children's Information</h2>
-            <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. AnyWallpaper does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+    </p>
 
-            <h2>Consent</h2>
-            <p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
-        </div>
+  </div>
+
+</section>
+
+<section class="content-section">
+
+  <div class="container">
+
+    <div class="content-box">
+
+      <h2>
+        Introduction
+      </h2>
+
+      <p>
+
+        AnyWallpaper respects user privacy and is committed to protecting personal information. This Privacy Policy explains how information may be collected and used while accessing our website.
+
+      </p>
+
+      <h2>
+        Information Collection
+      </h2>
+
+      <p>
+
+        We may collect non-personal information including browser type, device information, operating system, referring pages and general website usage statistics.
+
+      </p>
+
+      <h2>
+        Cookies
+      </h2>
+
+      <p>
+
+        AnyWallpaper may use cookies to improve user experience, analyze website traffic and optimize website performance.
+
+      </p>
+
+      <ul>
+
+        <li>Improve website functionality</li>
+        <li>Analyze traffic and visitor behavior</li>
+        <li>Remember user preferences</li>
+
+      </ul>
+
+      <h2>
+        Third Party Services
+      </h2>
+
+      <p>
+
+        We may use third party services such as analytics providers and advertising networks including Google AdSense. These services may collect data according to their own privacy policies.
+
+      </p>
+
+      <h2>
+        Downloaded Content
+      </h2>
+
+      <p>
+
+        Wallpapers provided on AnyWallpaper are intended for personal desktop use. Users are responsible for ensuring compliance with applicable copyright and licensing requirements.
+
+      </p>
+
+      <h2>
+        Security
+      </h2>
+
+      <p>
+
+        We take reasonable steps to protect website information and maintain secure website performance. However, no online platform can guarantee absolute security.
+
+      </p>
+
+      <h2>
+        External Links
+      </h2>
+
+      <p>
+
+        Our website may contain links to third party websites. We are not responsible for the content or privacy practices of external websites.
+
+      </p>
+
+      <h2>
+        Changes To This Policy
+      </h2>
+
+      <p>
+
+        AnyWallpaper may update this Privacy Policy at any time without prior notice. Users are encouraged to review this page periodically.
+
+      </p>
+
+      <h2>
+        Contact
+      </h2>
+
+      <p>
+
+        If you have questions regarding this Privacy Policy, please contact us through the contact page available on our website.
+
+      </p>
 
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div style="margin-bottom: 15px;"><strong>AnyWallpaper by BSR Studios</strong> - Reliable, high-quality dynamic screen experiences globally.</div>
-            <div class="footer-links" style="margin-bottom: 15px;">
-                <a href="/info/privacy/">Privacy Policy</a> | 
-                <a href="/info/terms/">Terms Of Service</a> | 
-                <a href="/info/contact/">Contact Us</a>
-            </div>
-            <div>&copy; 2021-2026 AnyWallpaper by BSR Studios. All rights reserved.</div>
-        </div>
-    </footer>
+  </div>
 
-    <script>
-        function toggleDropdown(event) {
-            event.stopPropagation();
-            const menu = document.getElementById("categoryMenu");
-            const btn = document.querySelector(".dropdown-btn");
-            menu.classList.toggle("show");
-            btn.classList.toggle("active");
-        }
-        window.onclick = function(event) {
-            const menu = document.getElementById("categoryMenu");
-            const btn = document.querySelector(".dropdown-btn");
-            if (menu.classList.contains('show') && !event.target.closest('.dropdown')) {
-                menu.classList.remove('show');
-                btn.classList.remove('active');
-            }
-        }
-    </script>
+</section>
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3 class="logo">
+          Any<span>Wallpaper</span>
+        </h3>
+
+        <p style="margin-top:20px;color:#9d9d9d;line-height:1.9;">
+
+          Premium live wallpapers for desktop PCs and gaming setups.
+
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Categories
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="/anime/">Anime</a>
+          <a href="/nature/">Nature</a>
+          <a href="/gaming/">Gaming</a>
+          <a href="/space/">Space</a>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Information
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="/info/privacy/">Privacy Policy</a>
+          <a href="/info/terms/">Terms & Conditions</a>
+          <a href="/info/contact/">Contact</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 AnyWallpaper. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
 </body>
 </html>
