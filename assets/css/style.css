@@ -1,0 +1,84 @@
+/* ==========================
+   GLOBAL VARIABLES & RESET
+========================== */
+:root {
+  --accent: #00d26a; 
+  --accent-hover: #008643;
+  --accent-glow: rgba(0, 210, 106, 0.12);
+  --bg-color: #050505;
+  --text-main: #ffffff;
+  --text-muted: #a9a9a9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body { 
+    background: var(--bg-color); 
+    color: var(--text-main); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    overflow-x: hidden; 
+    padding-top: 80px; /* Navbar ke liye space */
+}
+
+a { text-decoration: none; color: inherit; }
+img { width: 100%; display: block; }
+
+/* FIXED: Container width 88% kar di hai taaki text side se door rahe */
+.container { 
+    width: 88%; 
+    max-width: 1300px; 
+    margin: auto; 
+}
+
+section { padding: 90px 0; }
+.section-title { font-size: 44px; margin-bottom: 18px; }
+.section-description { color: var(--text-muted); line-height: 1.9; margin-bottom: 55px; max-width: 850px; }
+
+/* ==========================
+   HEADER & NAVBAR (LOCKED)
+========================== */
+header { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    height: 80px; 
+    z-index: 999; 
+    background: rgba(0,0,0,0.95); 
+    backdrop-filter: blur(20px); 
+    border-bottom: 1px solid rgba(255,255,255,0.06); 
+}
+
+.navbar { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 30px; font-weight: bold; }
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: #cfcfcf; transition: 0.3s; font-size: 15px; }
+.nav-links a:hover { color: var(--accent); }
+
+/* DROPDOWN */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn { cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.dropdown-content { display: none; position: absolute; background-color: rgba(10, 10, 10, 0.95); min-width: 180px; box-shadow: 0px 10px 30px rgba(0,0,0,0.5); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); z-index: 1000; top: 100%; left: 0; padding: 10px 0; }
+.dropdown-content a { color: #cfcfcf; padding: 12px 22px; display: block; transition: 0.3s; font-size: 15px; }
+.dropdown-content a:hover { background-color: rgba(255,255,255,0.05); color: var(--accent); padding-left: 28px; }
+.dropdown:hover .dropdown-content { display: block; }
+
+/* ==========================
+   WALLPAPER CARDS & FOOTER
+========================== */
+.wallpaper-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.wallpaper-card { overflow: hidden; border-radius: 28px; background: #0f0f0f; border: 1px solid rgba(255,255,255,0.06); transition: 0.4s; position: relative; height: 100%; }
+.wallpaper-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
+.wallpaper-image img { height: 240px; object-fit: cover; }
+.wallpaper-content { padding: 25px; }
+.card-title { font-size: 24px; margin-bottom: 14px; }
+.card-btn { display: block; width: 100%; text-align: center; padding: 15px; border-radius: 18px; background: linear-gradient(135deg, var(--accent), var(--accent-hover)); font-weight: bold; }
+
+footer { padding: 90px 0 40px; background: #030303; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+.footer-links { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+.footer-links a { color: #9d9d9d; }
+.copyright { margin-top: 55px; text-align: center; color: #707070; font-size: 14px; }
+
+@media(max-width: 900px) { .nav-links { display: none; } }
