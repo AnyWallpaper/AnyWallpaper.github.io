@@ -9,44 +9,46 @@
   
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/category.css">
+  
   <script src="../../assets/js/components.js" defer></script>
+  <script src="/ads/ad-manager.js" defer></script>
 
   <style>
     :root { --accent: #00d26a; }
     
-    /* Article Formatting */
-    .seo-article { margin-bottom: 50px; background: #0d0d0d; padding: 45px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.06); }
+    .seo-article { margin-bottom: 30px; background: #0d0d0d; padding: 45px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.06); }
     .seo-article h1, .seo-article h2 { color: var(--accent); margin-bottom: 20px; font-size: 34px; }
     .seo-article p { color: #b3b3b3; line-height: 1.9; font-size: 17px; margin-bottom: 18px; }
     .seo-article strong { color: #fff; }
 
-    /* Download Section */
-    .main-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; margin-bottom: 60px; }
+    .main-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; margin-bottom: 30px; }
     .video-card { position: relative; border-radius: 24px; overflow: hidden; background: #000; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
     .video-card video { width: 100%; aspect-ratio: 16/9; display: block; object-fit: cover; }
     
     .stats-box { background: #0f0f0f; padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); }
     
-    /* FIX: Grid 2 columns for Downloads and Likes only */
     .count-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; } 
     .stat-card { background: rgba(255,255,255,0.03); padding: 15px 10px; border-radius: 15px; text-align: center; font-size: 15px;}
     .stat-card span { display: block; font-size: 24px; font-weight: bold; color: var(--accent); margin-bottom: 5px; }
 
     .btn-group { display: flex; flex-direction: column; gap: 15px; }
-    .btn-main { padding: 18px; border-radius: 16px; text-align: center; font-weight: bold; cursor: pointer; transition: 0.3s; border: none; font-size: 16px; width: 100%; }
-    .download-btn { background: linear-gradient(135deg, var(--accent), #008643); color: #fff; text-decoration: none; display: block; }
+    
+    .btn-main { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px; border-radius: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; border: none; font-size: 16px; width: 100%; }
+    .download-btn { background: linear-gradient(135deg, var(--accent), #008643); color: #fff; text-decoration: none; }
     .download-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 210, 106, 0.2); }
     .like-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; }
     .like-btn.liked { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-icon { width: 22px; height: 22px; filter: invert(1); }
 
     .recommended { margin-bottom: 60px; }
-    
     @media(max-width: 900px) { .main-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
-<header></header> <main class="container" style="padding-top: 120px; padding-bottom: 60px;">
+<header></header> 
+
+<main class="container" style="padding-top: 120px; padding-bottom: 60px;">
     
     <section class="seo-article">
         <h1>Zoro's Actual Power Level Is Extremely High</h1>
@@ -56,14 +58,13 @@
         <p>
             Our premium 1080p animated wallpaper captures the raw intensity, the "King of Hell" aura, and the legendary swordsmanship of Zoro. You can see the dark green glowing Haki flowing seamlessly, meticulously designed to create a loop that feels cinematic. Unlike static images, this moving background brings the battlefield right to your monitor. 
         </p>
-        <p>
-            Whether you are using a dual-monitor setup or a high-refresh-rate gaming screen, this wallpaper is strictly optimized to run without eating up your GPU or RAM. It delivers high-fidelity visuals while keeping your system resources perfectly free for gaming and heavy tasks. Dive into the world of the future World's Greatest Swordsman.
-        </p>
     </section>
+
+    <div class="ad-native-placeholder" style="margin-bottom: 30px; text-align: center;"></div>
 
     <div class="main-grid">
         <div class="video-card">
-            <video autoplay muted loop playsinline preload="auto" poster="thumb.jpg">
+            <video id="preview-video" autoplay muted loop playsinline preload="auto" poster="thumb.jpg">
                 <source src="https://github.com/AryanMewada/videos/blob/main/anime/Zoro_s%20Actual%20Power%20Level%20Is%20Extremely%20High.mp4?raw=true" type="video/mp4">
             </video>
         </div>
@@ -77,9 +78,14 @@
             <div class="btn-group">
                 <button id="download-btn" class="btn-main download-btn" 
                         onclick="smartDownload('https://github.com/AryanMewada/videos/blob/main/anime/Zoro_s%20Actual%20Power%20Level%20Is%20Extremely%20High.mp4?raw=true', 'Zoro_Power_Level_1080p.mp4')">
+                   <img src="/assets/icons/download-cloud.svg" class="btn-icon" alt="Download">
                    Download Now (1080p)
                 </button>
-                <button id="like-btn" class="btn-main like-btn">❤ Like This Wallpaper</button>
+                
+                <button id="like-btn" class="btn-main like-btn">
+                   <img src="/assets/icons/like.svg" class="btn-icon" alt="Like">
+                   Like This Wallpaper
+                </button>
             </div>
 
             <div style="margin-top: 25px; color: #777; font-size: 14px; line-height: 1.8;">
@@ -91,21 +97,42 @@
         </div>
     </div>
 
+    <div class="ad-banner-placeholder" style="margin-bottom: 40px; display: flex; justify-content: center; overflow: hidden;"></div>
+
     <section class="recommended">
-        <h2 class="section-title">Recommended Anime Wallpapers</h2>
-        <div class="wallpaper-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-            <a href="/anime/" class="wallpaper-card" style="height: 220px; display: block;">
-                <div class="wallpaper-image" style="height: 100%;"><img src="../../assets/images/categories/anime-thumb.jpg" alt="Anime" style="height: 100%;"></div>
+        <h2 class="section-title" style="margin-bottom: 25px;">Recommended Wallpapers</h2>
+        <div class="wallpaper-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+            
+            <a href="/anime/" class="wallpaper-card">
+                <div class="wallpaper-image">
+                    <img src="../../assets/images/categories/anime-thumb.jpg" alt="Epic Anime Battle">
+                </div>
+                <div class="wallpaper-content" style="padding: 20px; text-align: center;">
+                    <h3 class="card-title" style="font-size: 20px; margin-bottom: 5px;">Epic Anime Battle</h3>
+                    <p style="color: var(--accent); font-size: 14px; margin: 0; font-weight: bold;">Anime Live Wallpaper</p>
+                </div>
             </a>
-            <a href="/gaming/" class="wallpaper-card" style="height: 220px; display: block;">
-                <div class="wallpaper-image" style="height: 100%;"><img src="../../assets/images/categories/gaming-thumb.jpg" alt="Gaming" style="height: 100%;"></div>
+
+            <a href="/gaming/" class="wallpaper-card">
+                <div class="wallpaper-image">
+                    <img src="../../assets/images/categories/gaming-thumb.jpg" alt="RGB Gaming Setup">
+                </div>
+                <div class="wallpaper-content" style="padding: 20px; text-align: center;">
+                    <h3 class="card-title" style="font-size: 20px; margin-bottom: 5px;">RGB Gaming Setup</h3>
+                    <p style="color: var(--accent); font-size: 14px; margin: 0; font-weight: bold;">Gaming Wallpaper</p>
+                </div>
             </a>
-            <a href="/cyberpunk/" class="wallpaper-card" style="height: 220px; display: block;">
-                <div class="wallpaper-image" style="height: 100%;"><img src="../../assets/images/categories/cyberpunk-thumb.jpg" alt="Cyberpunk" style="height: 100%;"></div>
+
+            <a href="/cyberpunk/" class="wallpaper-card">
+                <div class="wallpaper-image">
+                    <img src="../../assets/images/categories/cyberpunk-thumb.jpg" alt="Neon City Night">
+                </div>
+                <div class="wallpaper-content" style="padding: 20px; text-align: center;">
+                    <h3 class="card-title" style="font-size: 20px; margin-bottom: 5px;">Neon City Night</h3>
+                    <p style="color: var(--accent); font-size: 14px; margin: 0; font-weight: bold;">Cyberpunk Wallpaper</p>
+                </div>
             </a>
-            <a href="/space/" class="wallpaper-card" style="height: 220px; display: block;">
-                <div class="wallpaper-image" style="height: 100%;"><img src="../../assets/images/categories/space-thumb.jpg" alt="Space" style="height: 100%;"></div>
-            </a>
+
         </div>
     </section>
 
@@ -115,18 +142,15 @@
             AnyWallpaper is your premier destination for high-quality, lag-free live wallpapers. We understand that gamers and professionals want beautiful aesthetics without sacrificing computer performance. All our animated wallpapers are rendered in H.264 format, making them universally compatible with popular software like <strong>Wallpaper Engine</strong>, <strong>Lively Wallpaper</strong>, and standard desktop modding tools.
         </p>
         <p>
-            Unlike heavy 4K raw videos that drop your in-game frames, our 1080p live wallpapers are perfectly balanced. They pause automatically when you launch a full-screen application or game, ensuring 0% resource usage when it matters the most. From Anime and Gaming to Nature and Cyberpunk aesthetics, we provide a vast library of constantly updated content—all completely free to download.
+            Unlike heavy 4K raw videos that drop your in-game frames, our 1080p live wallpapers are perfectly balanced. They pause automatically when you launch a full-screen application or game, ensuring 0% resource usage when it matters the most.
         </p>
 
         <h2 style="margin-top: 40px; font-size: 26px;">Frequently Asked Questions (FAQ)</h2>
         <p><strong>How do I set this as my desktop background?</strong><br>
         You will need a third-party application to run video wallpapers on Windows. We highly recommend using "Lively Wallpaper" (which is free and open-source) or "Wallpaper Engine" from Steam. Simply download our MP4 file and drag-and-drop it into the software.</p>
         
-        <p><strong>Will a live wallpaper drain my laptop battery?</strong><br>
+        <p style="margin-top: 15px;"><strong>Will a live wallpaper drain my laptop battery?</strong><br>
         While animated backgrounds do use slightly more power than static images, you can set your wallpaper software to automatically pause the animation when your laptop is unplugged (running on battery) to save power.</p>
-
-        <p><strong>Are there any watermarks on the downloaded file?</strong><br>
-        No! All live wallpapers downloaded from AnyWallpaper are 100% clean, watermark-free, and ready for your personal desktop use.</p>
     </section>
 
 </main>
@@ -139,18 +163,16 @@
 <script>
 async function smartDownload(url, filename) {
     const btn = document.getElementById('download-btn');
-    const originalText = btn.innerText;
+    const originalContent = btn.innerHTML; 
     
     try {
-        btn.innerText = "Processing (Saving Data)...";
+        btn.innerHTML = `<img src="/assets/icons/download.svg" class="btn-icon"> Processing...`;
         btn.style.pointerEvents = "none";
         btn.style.opacity = "0.7";
 
-        // Fetching will automatically use browser cache if the video is already buffered in preview!
         const response = await fetch(url);
         const blob = await response.blob();
         
-        // Create an invisible link to trigger local download
         const blobUrl = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = blobUrl;
@@ -158,18 +180,15 @@ async function smartDownload(url, filename) {
         document.body.appendChild(a);
         a.click();
         
-        // Cleanup
         document.body.removeChild(a);
         URL.revokeObjectURL(blobUrl);
 
-        // API Call for download count
         if(typeof handleDownload === 'function') handleDownload();
         
-        btn.innerText = "Downloaded Successfully!";
-        setTimeout(() => { btn.innerText = originalText; btn.style.pointerEvents = "auto"; btn.style.opacity = "1"; }, 3000);
+        btn.innerHTML = `<img src="/assets/icons/check.svg" class="btn-icon"> Downloaded!`;
+        setTimeout(() => { btn.innerHTML = originalContent; btn.style.pointerEvents = "auto"; btn.style.opacity = "1"; }, 3000);
         
     } catch (e) {
-        // Fallback incase fetch fails due to CORS or adblockers
         const a = document.createElement('a');
         a.href = url;
         a.download = filename;
@@ -180,11 +199,19 @@ async function smartDownload(url, filename) {
         
         if(typeof handleDownload === 'function') handleDownload();
         
-        btn.innerText = originalText;
+        btn.innerHTML = originalContent;
         btn.style.pointerEvents = "auto";
         btn.style.opacity = "1";
     }
 }
+
+// Fallback safety to ensure video plays correctly on browsers like iOS Safari / Chrome Mobile
+document.addEventListener("DOMContentLoaded", function() {
+    let vid = document.getElementById("preview-video");
+    if(vid && vid.paused) {
+        vid.play().catch(e => console.log("Autoplay was prevented by browser."));
+    }
+});
 </script>
 
 </body>
