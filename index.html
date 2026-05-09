@@ -1,236 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnyWallpaper - Download Free Live Wallpapers & Animated Backgrounds</title>
-    
-    <!-- Heavy Broad SEO Meta Tags -->
-    <meta name="description" content="Download high-quality, free live wallpapers and animated backgrounds for PC and mobile. Enjoy highly stable, seamless moving video wallpapers engineered for smooth performance.">
-    <meta name="keywords" content="live wallpapers for PC, animated backgrounds download, free video wallpapers, moving desktop backgrounds, Windows live wallpaper, reliable live wallpapers, nature, anime, gaming, amoled">
-    <meta name="author" content="AnyWallpaper by BSR Studios">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/logo.png">
+  <title>AnyWallpaper - Premium Live Wallpapers Free Download</title>
+  <meta name="description" content="Download premium 1080p live wallpapers for PC. Explore high-quality Anime, Gaming, Cyberpunk, AMOLED, and AI-enhanced animated backgrounds. 100% Free.">
+  <meta name="keywords" content="live wallpapers, pc wallpapers, 1080p wallpapers, animated wallpapers, wallpaper engine, ai wallpapers, free download, desktop background">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="AnyWallpaper">
+  <meta name="theme-color" content="#00d26a">
 
-    <style>
-        /* Global & Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+  <link rel="canonical" href="https://anywallpaper.github.io/">
+  
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="apple-touch-icon" href="/logo.jpg">
 
-        /* Icon Styling */
-        .icon { width: 20px; height: 20px; vertical-align: middle; margin-right: 8px; filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(180deg); }
-        
-        /* Premium Sticky Navbar with Dropdown */
-        nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        nav .logo { font-size: 1.5rem; font-weight: bold; color: #0f172a; text-decoration: none; }
-        nav .logo span { color: #2563eb; }
-        
-        .nav-links { display: flex; align-items: center; }
-        .nav-links > a, .dropdown-btn { margin-left: 25px; color: #475569; text-decoration: none; font-weight: 500; transition: 0.3s; display: inline-flex; align-items: center; cursor: pointer; border: none; background: none; font-size: 1rem; }
-        .nav-links > a:hover, .dropdown-btn:hover { color: #2563eb; }
-        .dropdown-btn .arrow { font-size: 0.7rem; margin-left: 5px; transition: transform 0.3s; }
-        .dropdown-btn.active .arrow { transform: rotate(180deg); }
-        
-        /* Dropdown Architecture */
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 180px; box-shadow: 0px 10px 25px rgba(0,0,0,0.1); z-index: 1; border-radius: 12px; overflow: hidden; top: 120%; left: 15px; border: 1px solid #f1f5f9; opacity: 0; transform: translateY(-10px); transition: opacity 0.2s, transform 0.2s; }
-        .dropdown-content.show { display: block; opacity: 1; transform: translateY(0); }
-        .dropdown-content a { color: #475569; padding: 12px 20px; text-decoration: none; display: block; border-bottom: 1px solid #f8fafc; transition: background 0.2s; }
-        .dropdown-content a:last-child { border-bottom: none; }
-        .dropdown-content a:hover { background-color: #eff6ff; color: #2563eb; padding-left: 25px; }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AnyWallpaper - Premium 1080p Live Wallpapers">
+  <meta property="og:description" content="Download lightweight, lag-free 1080p animated wallpapers for your gaming PC.">
+  <meta property="og:image" content="https://anywallpaper.github.io/logo.jpg">
+  <meta property="og:url" content="https://anywallpaper.github.io/">
+  <meta property="og:site_name" content="AnyWallpaper">
 
-        /* Main Container */
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AnyWallpaper">
+  <meta name="twitter:description" content="Premium 1080p live wallpapers for desktop PCs">
+  <meta name="twitter:image" content="https://anywallpaper.github.io/logo.jpg">
 
-        /* Hero Section */
-        .hero { text-align: center; margin-bottom: 50px; background: linear-gradient(135deg, #0f172a, #1e293b); color: white; padding: 60px 20px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
 
-        /* Category Grid Architecture */
-        .category-section h2 { margin-bottom: 25px; font-size: 1.8rem; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        
-        .category-card { position: relative; border-radius: 16px; overflow: hidden; height: 180px; background-color: #e2e8f0; text-decoration: none; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.3s ease; display: block; }
-        .category-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px -5px rgba(0,0,0,0.15); }
-        
-        /* Thumbnail Setup */
-        .category-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-        .category-card:hover img { transform: scale(1.05); }
-        /* Gradient Overlay */
-        .category-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.1) 100%); display: flex; align-items: flex-end; padding: 20px; }
-        .category-overlay h3 { color: #ffffff; font-size: 1.4rem; margin: 0; font-weight: 600; }
-
-        /* Professional Master SEO Article Block (Broad Intent) */
-        .master-seo-article { background-color: #ffffff; border-radius: 16px; padding: 40px; margin-top: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; }
-        .master-seo-article h2 { font-size: 2rem; color: #0f172a; margin-bottom: 20px; }
-        .master-seo-article h3 { font-size: 1.4rem; color: #1e293b; margin: 25px 0 10px 0; }
-        .master-seo-article p { color: #475569; font-size: 1.05rem; margin-bottom: 15px; line-height: 1.8; }
-        .master-seo-article ul { margin-left: 20px; color: #475569; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
-        .master-seo-article li { margin-bottom: 8px; }
-
-        /* Premium Footer */
-        footer { background-color: #ffffff; border-top: 1px solid #e2e8f0; padding: 50px 20px 30px; margin-top: 50px; }
-        .footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
-        .footer-brand h4 { font-size: 1.4rem; color: #0f172a; margin-bottom: 10px; }
-        .footer-brand p { color: #64748b; font-size: 0.95rem; max-width: 300px; line-height: 1.6; }
-        
-        .footer-links-group h5 { font-size: 1.1rem; color: #0f172a; margin-bottom: 15px; }
-        .footer-links-group a { display: block; color: #64748b; text-decoration: none; margin-bottom: 10px; transition: 0.3s; }
-        .footer-links-group a:hover { color: #2563eb; padding-left: 5px; }
-        
-        .footer-bottom { text-align: center; border-top: 1px solid #e2e8f0; margin-top: 40px; padding-top: 20px; color: #94a3b8; font-size: 0.9rem; }
-    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://anywallpaper.github.io/#website",
+        "url": "https://anywallpaper.github.io/",
+        "name": "AnyWallpaper",
+        "description": "Premium 1080p Live Wallpapers For PC"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://anywallpaper.github.io/#organization",
+        "name": "AnyWallpaper",
+        "url": "https://anywallpaper.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://anywallpaper.github.io/logo.jpg"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are the wallpapers free to download?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all our 1080p live wallpapers are 100% free to download for personal desktop use with no watermarks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will these live wallpapers slow down my gaming PC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, we specifically optimize our video files for 1080p resolution. They are extremely lightweight and designed to pause while you are playing games in fullscreen, ensuring zero frame rate drops."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which software do I need to use these live wallpapers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can use free open-source tools like Lively Wallpaper, or premium software like Wallpaper Engine on Steam to apply these video files as your Windows background."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use AI to create these wallpapers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, some of our futuristic and fantasy collections are conceptualized and enhanced using advanced AI generation tools, which are then manually animated and optimized for the best desktop experience."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-    <!-- Premium Navbar -->
-    <nav>
-        <a href="/" class="logo">Any<span>Wallpaper</span></a>
-        <div class="nav-links">
-            <a href="/"><img src="/assets/icons/home.svg" alt="Home" class="icon"> Home</a>
-            
-            <div class="dropdown">
-                <button class="dropdown-btn" onclick="toggleDropdown(event)">
-                    <img src="/assets/icons/category.svg" alt="Categories" class="icon"> Categories <span class="arrow">▼</span>
-                </button>
-                <div class="dropdown-content" id="categoryMenu">
-                    <a href="/nature/">Nature</a>
-                    <a href="/anime/">Anime</a>
-                    <a href="/cyberpunk/">Cyberpunk</a>
-                    <a href="/cars/">Cars & Vehicles</a>
-                    <a href="/gaming/">Gaming</a>
-                    <a href="/space/">Space</a>
-                    <a href="/fantasy/">Fantasy</a>
-                    <a href="/amoled/">AMOLED</a>
-                </div>
-            </div>
-        </div>
+<header>
+  <div class="container navbar">
+    <a href="/" class="logo">Any<span>Wallpaper</span></a>
+    
+    <nav class="nav-links">
+      <a href="/anime/">Anime</a>
+      <a href="/nature/">Nature</a>
+      <a href="/gaming/">Gaming</a>
+      <a href="/space/">Space</a>
+      <a href="/cyberpunk/">Cyberpunk</a>
+      <a href="/fantasy/">Fantasy</a>
+      <a href="/car-and-vehicle/">Vehicle</a>
+      <a href="/amoled/">AMOLED</a>
     </nav>
+  </div>
+</header>
 
-    <div class="container">
-        
-        <!-- Hero Section (No Ads Here) -->
-        <header class="hero">
-            <h1>Upgrade Your Screen Dynamically</h1>
-            <p>Download highly stable, flawlessly looped live video wallpapers. Built for smooth performance on any PC or mobile hardware.</p>
-        </header>
-
-        <!-- Categories Grid Section -->
-        <section class="category-section">
-            <h2>Explore Categories</h2>
-            
-            <div class="category-grid">
-                
-                <a href="/nature/" class="category-card">
-                    <img src="/assets/images/categories/nature-thumb.png" alt="Nature Live Wallpapers">
-                    <div class="category-overlay"><h3>Nature</h3></div>
-                </a>
-
-                <a href="/anime/" class="category-card">
-                    <img src="/assets/images/categories/anime-thumb.png" alt="Anime Animated Backgrounds">
-                    <div class="category-overlay"><h3>Anime</h3></div>
-                </a>
-
-                <a href="/gaming/" class="category-card">
-                    <img src="/assets/images/categories/gaming-thumb.png" alt="Gaming Video Backgrounds">
-                    <div class="category-overlay"><h3>Gaming</h3></div>
-                </a>
-
-                <a href="/space/" class="category-card">
-                    <img src="/assets/images/categories/space-thumb.png" alt="Space Live Wallpapers">
-                    <div class="category-overlay"><h3>Space</h3></div>
-                </a>
-
-                <a href="/cyberpunk/" class="category-card">
-                    <img src="/assets/images/categories/cyberpunk-thumb.png" alt="Cyberpunk Moving Backgrounds">
-                    <div class="category-overlay"><h3>Cyberpunk</h3></div>
-                </a>
-
-                <a href="/fantasy/" class="category-card">
-                    <img src="/assets/images/categories/fantasy-thumb.png" alt="Fantasy Animated Wallpapers">
-                    <div class="category-overlay"><h3>Fantasy</h3></div>
-                </a>
-
-                <a href="/cars/" class="category-card">
-                    <img src="/assets/images/categories/cars-thumb.png" alt="Cars and Vehicles Video Wallpapers">
-                    <div class="category-overlay"><h3>Cars & Vehicles</h3></div>
-                </a>
-
-                <a href="/amoled/" class="category-card">
-                    <img src="/assets/images/categories/amoled-thumb.png" alt="AMOLED True Black Live Wallpapers">
-                    <div class="category-overlay"><h3>AMOLED</h3></div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Broad SEO Article Section (Targeting "Live Wallpaper" organically) -->
-        <article class="master-seo-article">
-            <h2>Your Reliable Source for Free Live Wallpapers</h2>
-            <p>Finding the perfect background for your setup can completely transform your digital workspace. Whether you are searching for a relaxing way to customize your desktop, or you want high-quality <strong>moving desktop backgrounds</strong> to match your RGB setup, AnyWallpaper delivers. We provide a massive library of meticulously crafted <strong>live wallpapers for PC</strong> and mobile devices, bringing dynamic motion to your screens without slowing down your system.</p>
-            
-            <h3>Engineered for Smooth Performance</h3>
-            <p>One of the most common issues with <strong>animated backgrounds</strong> is that they consume too much system memory, causing lag during gaming or heavy workloads. At BSR Studios, we have solved this. Every video file hosted on our platform is strictly engineered to maintain a minimal CPU usage footprint. This means you get a highly stable visual experience that runs flawlessly, even on budget PCs and entry-level laptops.</p>
-            
-            <h3>A Category for Every Vibe</h3>
-            <ul>
-                <li><strong>Immersive Environments:</strong> Bring the outdoors inside with our calming Nature scenes or explore the universe with Space backgrounds.</li>
-                <li><strong>Pop Culture & Media:</strong> Download seamlessly looped Anime sequences and action-packed Gaming wallpapers.</li>
-                <li><strong>Aesthetic Designs:</strong> Perfect your setup with futuristic Cyberpunk cityscapes or battery-saving, true black AMOLED wallpapers.</li>
-            </ul>
-
-            <p>Experience the next generation of screen customization. Browse our categories above, select your favorite 1080p resolution file, and enjoy highly efficient, beautiful <strong>free video wallpapers</strong> today.</p>
-        </article>
-
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-badge">
+      Premium 1080p Animated Wallpapers
     </div>
 
-    <!-- Complete Professional Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h4>AnyWallpaper</h4>
-                <p>A BSR Studios Project. Providing reliable, high-quality dynamic screen experiences globally. Optimized for smooth performance and minimal system impact.</p>
-            </div>
-            
-            <div class="footer-links-group">
-                <h5>Our Network</h5>
-                <a href="https://anyvidwall.github.io" target="_blank">AnyVidWall Desktop App</a>
-                <a href="https://anywebwall.github.io" target="_blank">AnyWebWall Platform</a>
-                <a href="#">BSR Studios Home</a>
-            </div>
+    <h1>Premium Live Wallpapers For PC</h1>
 
-            <!-- Pretty URL Legal Links -->
-            <div class="footer-links-group">
-                <h5>Legal & Info</h5>
-                <a href="/info/privacy/">Privacy Policy</a>
-                <a href="/info/terms/">Terms of Service</a>
-                <a href="/info/contact/">Contact Us</a>
-            </div>
+    <p>
+      Explore cinematic animated wallpapers for desktop PCs and gaming setups. Download high-quality Anime, Space, Gaming, and AMOLED live wallpapers in lag-free 1080p Full HD.
+    </p>
+
+    <div class="hero-buttons" style="margin-top: 40px;">
+      <a href="#categories" class="primary-btn">Explore Categories</a>
+      <a href="#features" class="secondary-btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section id="categories" style="padding-top: 60px;">
+  <div class="container">
+    <h2 class="section-title">Browse Categories</h2>
+    <p class="section-description">
+      Explore premium 1080p wallpaper collections designed for ultimate gaming setups and modern desktop PCs.
+    </p>
+
+    <div class="categories-grid">
+      <a href="/anime/" class="category-card">
+        <img src="assets/images/categories/anime-thumb.jpg" alt="Anime Wallpapers">
+        <div class="category-content">
+          <h3>Anime</h3>
+          <p>Futuristic anime and cinematic Japanese live wallpapers.</p>
         </div>
-        
-        <div class="footer-bottom">
-            &copy; 2026 AnyWallpaper by BSR Studios. All rights reserved.
+      </a>
+
+      <a href="/nature/" class="category-card">
+        <img src="assets/images/categories/nature-thumb.jpg" alt="Nature Wallpapers">
+        <div class="category-content">
+          <h3>Nature</h3>
+          <p>Beautiful nature animations with relaxing ambient visuals.</p>
         </div>
-    </footer>
+      </a>
 
-    <script>
-        function toggleDropdown(event) {
-            event.stopPropagation();
-            const menu = document.getElementById("categoryMenu");
-            const btn = document.querySelector(".dropdown-btn");
-            menu.classList.toggle("show");
-            btn.classList.toggle("active");
-        }
+      <a href="/gaming/" class="category-card">
+        <img src="assets/images/categories/gaming-thumb.jpg" alt="Gaming Wallpapers">
+        <div class="category-content">
+          <h3>Gaming</h3>
+          <p>Epic gaming live wallpapers optimized for RGB setups.</p>
+        </div>
+      </a>
 
-        window.onclick = function(event) {
-            const menu = document.getElementById("categoryMenu");
-            const btn = document.querySelector(".dropdown-btn");
-            if (menu.classList.contains('show') && !event.target.closest('.dropdown')) {
-                menu.classList.remove('show');
-                btn.classList.remove('active');
-            }
-        }
-    </script>
+      <a href="/space/" class="category-card">
+        <img src="assets/images/categories/space-thumb.jpg" alt="Space Wallpapers">
+        <div class="category-content">
+          <h3>Space</h3>
+          <p>Deep galaxy, planets, and cinematic universe animations.</p>
+        </div>
+      </a>
+
+      <a href="/cyberpunk/" class="category-card">
+        <img src="assets/images/categories/cyberpunk-thumb.jpg" alt="Cyberpunk Wallpapers">
+        <div class="category-content">
+          <h3>Cyberpunk</h3>
+          <p>Futuristic neon cities and cyberpunk aesthetic wallpapers.</p>
+        </div>
+      </a>
+
+      <a href="/fantasy/" class="category-card">
+        <img src="assets/images/categories/fantasy-thumb.jpg" alt="Fantasy Wallpapers">
+        <div class="category-content">
+          <h3>Fantasy</h3>
+          <p>Magical dragons, mages, and fantasy kingdom animations.</p>
+        </div>
+      </a>
+
+      <a href="/car-and-vehicle/" class="category-card">
+        <img src="assets/images/categories/car-and-vehicle-thumb.jpg" alt="Car and Vehicle Wallpapers">
+        <div class="category-content">
+          <h3>Vehicle</h3>
+          <p>JDM supercars, drifting, and futuristic vehicle visuals.</p>
+        </div>
+      </a>
+
+      <a href="/amoled/" class="category-card">
+        <img src="assets/images/categories/amoled-thumb.jpg" alt="AMOLED Wallpapers">
+        <div class="category-content">
+          <h3>AMOLED</h3>
+          <p>Pure black premium wallpapers for infinite monitor contrast.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <h2 class="section-title">Why Choose AnyWallpaper?</h2>
+    <p class="section-description">
+      We focus on performance and visual fidelity. Here is why our live wallpapers are perfect for your PC.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-box">
+        <h3>1080p Performance</h3>
+        <p>No 4K bloatware. Our wallpapers are strictly optimized for 1080p Full HD displays, ensuring perfect balance of premium visual quality and zero lag.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Fast & Direct Downloads</h3>
+        <p>No annoying pop-ups or waiting timers. High-speed direct downloads optimized for gamers who want instant gratification.</p>
+      </div>
+      <div class="feature-box">
+        <h3>AI-Enhanced & Curated</h3>
+        <p>A mix of hand-crafted animations and cutting-edge AI-enhanced visuals. Every wallpaper is carefully curated and completely watermark-free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Are the wallpapers free to download?</h3>
+        <p>Yes, all our 1080p live wallpapers are 100% free to download for personal desktop use with no hidden fees or watermarks.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will these live wallpapers slow down my gaming PC?</h3>
+        <p>No. We specifically encode our video files in lightweight 1080p formats. Furthermore, software like Wallpaper Engine automatically pauses the animation when you launch a game, ensuring zero frame rate drops.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which software do I need to use these live wallpapers?</h3>
+        <p>To set these video files as your background, you need a live wallpaper client. We highly recommend <strong>Lively Wallpaper</strong> (Free/Open Source) or <strong>Wallpaper Engine</strong> (Available on Steam).</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you use AI to create these wallpapers?</h3>
+        <p>Yes, some of our premium futuristic and fantasy collections use AI tools for initial conceptualization and visual enhancement, which are then professionally animated for the perfect loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 class="logo">Any<span>Wallpaper</span></h3>
+        <p style="margin-top:20px;color:#9d9d9d;line-height:1.9;">
+          Premium 1080p live wallpapers for desktop PCs and gaming setups. Lightweight, fast, and completely free.
+        </p>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 20px; color: #fff;">Categories</h3>
+        <div class="footer-links">
+          <a href="/anime/">Anime</a>
+          <a href="/nature/">Nature</a>
+          <a href="/gaming/">Gaming</a>
+          <a href="/space/">Space</a>
+          <a href="/cyberpunk/">Cyberpunk</a>
+          <a href="/fantasy/">Fantasy</a>
+          <a href="/car-and-vehicle/">Vehicle</a>
+          <a href="/amoled/">AMOLED</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 20px; color: #fff;">Information</h3>
+        <div class="footer-links">
+          <a href="/info/privacy/">Privacy Policy</a>
+          <a href="/info/terms/">Terms & Conditions</a>
+          <a href="/info/contact/">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 AnyWallpaper. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+
 </body>
 </html>

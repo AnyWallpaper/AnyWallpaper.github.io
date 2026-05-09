@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>404 Page Not Found - AnyWallpaper</title>
+
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#00d26a">
+
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="apple-touch-icon" href="/logo.jpg">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    /* 404 Page Specific Premium Styles */
+    :root {
+      --accent: #00d26a;
+      --accent-hover: #008643;
+      --accent-glow: rgba(0, 210, 106, 0.15);
+    }
+
+    .error-wrapper {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      z-index: 2;
+    }
+
+    .background-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: var(--accent);
+      filter: blur(180px);
+      opacity: 0.12;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .error-code {
+      font-size: clamp(120px, 15vw, 180px);
+      font-weight: bold;
+      line-height: 1;
+      background: linear-gradient(135deg, #ffffff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .error-title {
+      font-size: clamp(30px, 5vw, 46px);
+      margin-bottom: 20px;
+    }
+
+    .error-desc {
+      color: #b3b3b3;
+      line-height: 1.9;
+      font-size: 18px;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    /* Category Pills Design */
+    .category-pills {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+
+    .cat-pill {
+      padding: 12px 26px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #cfcfcf;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .cat-pill:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="/" class="logo">Any<span>Wallpaper</span></a>
+
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      
+      <div class="dropdown">
+        <a class="dropbtn">Categories <span style="font-size: 12px; margin-left: 4px;">▼</span></a>
+        <div class="dropdown-content">
+          <a href="/anime/">Anime</a>
+          <a href="/nature/">Nature</a>
+          <a href="/gaming/">Gaming</a>
+          <a href="/space/">Space</a>
+          <a href="/cyberpunk/">Cyberpunk</a>
+          <a href="/fantasy/">Fantasy</a>
+          <a href="/car-and-vehicle/">Vehicle</a>
+          <a href="/amoled/">AMOLED</a>
+        </div>
+      </div>
+      
+      <a href="/info/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="error-wrapper">
+    <div class="background-glow"></div>
+    
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-desc">
+      Oops! The page you are looking for does not exist, has been moved, or is temporarily unavailable. 
+      Don't worry, you can head back home or explore our premium wallpaper categories below.
+    </p>
+
+    <a href="/" class="card-btn" style="width: auto; padding: 16px 45px; margin-bottom: 50px; font-size: 16px;">
+      Back To Homepage
+    </a>
+
+    <h3 style="color: #fff; font-size: 22px; margin-bottom: 15px;">Explore Premium Categories</h3>
+    <div class="category-pills">
+      <a href="/anime/" class="cat-pill">Anime</a>
+      <a href="/gaming/" class="cat-pill">Gaming</a>
+      <a href="/nature/" class="cat-pill">Nature</a>
+      <a href="/space/" class="cat-pill">Space</a>
+      <a href="/cyberpunk/" class="cat-pill">Cyberpunk</a>
+      <a href="/fantasy/" class="cat-pill">Fantasy</a>
+      <a href="/car-and-vehicle/" class="cat-pill">Vehicle</a>
+      <a href="/amoled/" class="cat-pill">AMOLED</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 class="logo">Any<span>Wallpaper</span></h3>
+        <p style="margin-top:20px;color:#9d9d9d;line-height:1.8;">
+          Premium 1080p animated wallpapers for desktop PCs and gaming setups. Lightweight, fast, and completely free.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom: 20px; color: #fff;">Quick Links</h3>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/anime/">Anime</a>
+          <a href="/gaming/">Gaming</a>
+          <a href="/space/">Space</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom: 20px; color: #fff;">Information</h3>
+        <div class="footer-links">
+          <a href="/info/privacy/">Privacy Policy</a>
+          <a href="/info/terms/">Terms & Conditions</a>
+          <a href="/info/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 AnyWallpaper. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+
+</body>
+</html>
