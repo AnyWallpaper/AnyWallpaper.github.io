@@ -7,12 +7,53 @@
   <title>Anime Red Eye Live Wallpaper [1080p] - AnyWallpaper</title>
   <meta name="description" content="Download Anime Red Eye live wallpaper for PC. Premium 1080p glowing red eye animated background for dark aesthetic gaming setups.">
   <meta name="keywords" content="anime red eye live wallpaper, glowing eye anime wallpaper, dark aesthetic live wallpaper pc, sharingan aesthetic background, 1080p anime wallpaper">
-  
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ff3d3d">
+
+  <link rel="canonical" href="https://anywallpaper.github.io/anime/anime-red-eye/">
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="apple-touch-icon" href="/logo.jpg">
+
+  <meta property="og:type" content="video.other">
+  <meta property="og:title" content="Anime Red Eye Live Wallpaper [1080p]">
+  <meta property="og:description" content="Premium 1080p glowing red eye animated background for dark aesthetic gaming setups.">
+  <meta property="og:image" content="https://anywallpaper.github.io/anime/anime-red-eye/thumb.jpg">
+  <meta property="og:url" content="https://anywallpaper.github.io/anime/anime-red-eye/">
+  <meta property="og:site_name" content="AnyWallpaper">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anime Red Eye Live Wallpaper [1080p]">
+  <meta name="twitter:description" content="Download high-quality Anime Red Eye animated wallpaper for PC.">
+  <meta name="twitter:image" content="https://anywallpaper.github.io/anime/anime-red-eye/thumb.jpg">
+
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/category.css">
-  
   <script src="../../assets/js/components.js" defer></script>
   <script src="/ads/ad-manager.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://anywallpaper.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Anime", "item": "https://anywallpaper.github.io/anime/" },
+          { "@type": "ListItem", "position": 3, "name": "Anime Red Eye", "item": "https://anywallpaper.github.io/anime/anime-red-eye/" }
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Anime Red Eye Live Wallpaper",
+        "description": "Download Anime Red Eye live wallpaper for PC. Premium 1080p glowing red eye animated background for dark aesthetic gaming setups.",
+        "thumbnailUrl": "https://anywallpaper.github.io/anime/anime-red-eye/thumb.jpg",
+        "uploadDate": "2023-10-25T08:00:00+08:00",
+        "contentUrl": "https://github.com/AryanMewada/videos/blob/main/anime/Anime-Red-Eye.mp4?raw=true"
+      }
+    ]
+  }
+  </script>
 
   <style>
     /* Red Eye Theme Color Update */
@@ -185,7 +226,7 @@ async function smartDownload(url, filename) {
         document.body.removeChild(a);
         URL.revokeObjectURL(blobUrl);
 
-        if(typeof handleDownload === 'function') handleDownload();
+        // FIX: API call yahan se hata di gayi hai (+2 bug fix)
         
         btn.innerHTML = `<img src="/assets/icons/check.svg" class="btn-icon"> Downloaded!`;
         setTimeout(() => { btn.innerHTML = originalContent; btn.style.pointerEvents = "auto"; btn.style.opacity = "1"; }, 3000);
@@ -199,7 +240,7 @@ async function smartDownload(url, filename) {
         a.click();
         document.body.removeChild(a);
         
-        if(typeof handleDownload === 'function') handleDownload();
+        // FIX: Yahan se bhi API call hata di gayi hai
         
         btn.innerHTML = originalContent;
         btn.style.pointerEvents = "auto";
