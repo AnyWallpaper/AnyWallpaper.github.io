@@ -101,35 +101,32 @@
 
     <section class="recommended">
         <h2 class="section-title" style="margin-bottom: 25px;">Recommended Wallpapers</h2>
-        <div class="wallpaper-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="wallpaper-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
             
-            <a href="/anime/" class="wallpaper-card">
+            <a href="/anime/anime-red-eye/" class="wallpaper-card">
                 <div class="wallpaper-image">
-                    <img src="../../assets/images/categories/anime-thumb.jpg" alt="Epic Anime Battle">
+                    <img src="/anime/anime-red-eye/thumb.jpg" alt="Anime Red Eye Live Wallpaper">
                 </div>
-                <div class="wallpaper-content" style="padding: 20px; text-align: center;">
-                    <h3 class="card-title" style="font-size: 20px; margin-bottom: 5px;">Epic Anime Battle</h3>
-                    <p style="color: var(--accent); font-size: 14px; margin: 0; font-weight: bold;">Anime Live Wallpaper</p>
+                <div class="wallpaper-content">
+                    <h3 class="card-title">Anime Red Eye</h3>
                 </div>
             </a>
 
-            <a href="/gaming/" class="wallpaper-card">
+            <a href="/anime/kakashi/" class="wallpaper-card">
                 <div class="wallpaper-image">
-                    <img src="../../assets/images/categories/gaming-thumb.jpg" alt="RGB Gaming Setup">
+                    <img src="/anime/kakashi/thumb.jpg" alt="Kakashi Hatake Live Wallpaper">
                 </div>
-                <div class="wallpaper-content" style="padding: 20px; text-align: center;">
-                    <h3 class="card-title" style="font-size: 20px; margin-bottom: 5px;">RGB Gaming Setup</h3>
-                    <p style="color: var(--accent); font-size: 14px; margin: 0; font-weight: bold;">Gaming Wallpaper</p>
+                <div class="wallpaper-content">
+                    <h3 class="card-title">Kakashi Hatake</h3>
                 </div>
             </a>
 
-            <a href="/cyberpunk/" class="wallpaper-card">
+            <a href="/anime/samurai-warrior/" class="wallpaper-card">
                 <div class="wallpaper-image">
-                    <img src="../../assets/images/categories/cyberpunk-thumb.jpg" alt="Neon City Night">
+                    <img src="/anime/samurai-warrior/thumb.jpg" alt="Samurai Warrior Live Wallpaper">
                 </div>
-                <div class="wallpaper-content" style="padding: 20px; text-align: center;">
-                    <h3 class="card-title" style="font-size: 20px; margin-bottom: 5px;">Neon City Night</h3>
-                    <p style="color: var(--accent); font-size: 14px; margin: 0; font-weight: bold;">Cyberpunk Wallpaper</p>
+                <div class="wallpaper-content">
+                    <h3 class="card-title">Samurai Warrior</h3>
                 </div>
             </a>
 
@@ -183,7 +180,7 @@ async function smartDownload(url, filename) {
         document.body.removeChild(a);
         URL.revokeObjectURL(blobUrl);
 
-        if(typeof handleDownload === 'function') handleDownload();
+        // FIX: API call yahan se hata di gayi hai (+2 bug fix)
         
         btn.innerHTML = `<img src="/assets/icons/check.svg" class="btn-icon"> Downloaded!`;
         setTimeout(() => { btn.innerHTML = originalContent; btn.style.pointerEvents = "auto"; btn.style.opacity = "1"; }, 3000);
@@ -197,7 +194,7 @@ async function smartDownload(url, filename) {
         a.click();
         document.body.removeChild(a);
         
-        if(typeof handleDownload === 'function') handleDownload();
+        // FIX: Yahan se bhi API call hata di gayi hai
         
         btn.innerHTML = originalContent;
         btn.style.pointerEvents = "auto";
