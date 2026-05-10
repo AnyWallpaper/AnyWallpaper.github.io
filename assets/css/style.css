@@ -24,7 +24,7 @@ body {
 a { text-decoration: none; color: inherit; }
 img { width: 100%; display: block; }
 
-/* FIXED: Container width 88% kar di hai taaki text side se door rahe */
+/* Container width 88% taaki text/cards side se door rahein */
 .container { 
     width: 88%; 
     max-width: 1300px; 
@@ -34,6 +34,16 @@ img { width: 100%; display: block; }
 section { padding: 90px 0; }
 .section-title { font-size: 44px; margin-bottom: 18px; }
 .section-description { color: var(--text-muted); line-height: 1.9; margin-bottom: 55px; max-width: 850px; }
+
+/* ==========================
+   PREMIUM EXTRAS (Scrollbar & Selection)
+========================== */
+::selection { background: var(--accent); color: #fff; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #050505; border-left: 1px solid rgba(255,255,255,0.05); }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 /* ==========================
    HEADER & NAVBAR (LOCKED)
@@ -59,7 +69,7 @@ header {
 /* DROPDOWN */
 .dropdown { position: relative; display: inline-block; }
 .dropbtn { cursor: pointer; display: flex; align-items: center; gap: 5px; }
-.dropdown-content { display: none; position: absolute; background-color: rgba(10, 10, 10, 0.95); min-width: 180px; box-shadow: 0px 10px 30px rgba(0,0,0,0.5); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); z-index: 1000; top: 100%; left: 0; padding: 10px 0; }
+.dropdown-content { display: none; position: absolute; background-color: rgba(10, 10, 10, 0.95); min-width: 180px; box-shadow: 0px 10px 30px rgba(0,0,0,0.5); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); z-index: 1000; top: 100%; left: 0; padding: 10px 0; backdrop-filter: blur(20px); }
 .dropdown-content a { color: #cfcfcf; padding: 12px 22px; display: block; transition: 0.3s; font-size: 15px; }
 .dropdown-content a:hover { background-color: rgba(255,255,255,0.05); color: var(--accent); padding-left: 28px; }
 .dropdown:hover .dropdown-content { display: block; }
@@ -78,6 +88,7 @@ header {
     transition: 0.4s; 
     display: flex; 
     flex-direction: column; 
+    text-decoration: none;
 }
 .wallpaper-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); box-shadow: 0 0 35px var(--accent-glow); }
 
@@ -85,14 +96,22 @@ header {
 .wallpaper-image img { height: 200px; object-fit: cover; transition: 0.5s; }
 .wallpaper-card:hover img { transform: scale(1.08); }
 
-/* Content ko center kiya aur sirf title ke liye clean banaya */
+/* Content ko center kiya aur sirf title aur category name ke liye clean banaya */
 .wallpaper-content { padding: 20px 15px; text-align: center; }
-.card-title { font-size: 18px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-title { font-size: 18px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; }
 
+/* ==========================
+   FOOTER
+========================== */
 footer { padding: 90px 0 40px; background: #030303; border-top: 1px solid rgba(255,255,255,0.06); }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
 .footer-links { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-.footer-links a { color: #9d9d9d; }
+.footer-links a { color: #9d9d9d; transition: 0.3s; }
+.footer-links a:hover { color: var(--accent); }
 .copyright { margin-top: 55px; text-align: center; color: #707070; font-size: 14px; }
 
+/* ==========================
+   RESPONSIVE GLOBALS
+========================== */
 @media(max-width: 900px) { .nav-links { display: none; } }
+@media(max-width: 600px) { .section-title { font-size: 34px; } }
