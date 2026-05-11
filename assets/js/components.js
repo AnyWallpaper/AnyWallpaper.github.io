@@ -2,7 +2,7 @@ const siteHeader = `
   <div class="container navbar">
     <a href="/" class="logo">Any<span>Wallpaper</span></a>
     <nav class="nav-links">
-      <a href="/anime/" style="display:flex; align-items:center; gap:6px;">
+      <a href="/" style="display:flex; align-items:center; gap:6px;">
         <img src="/assets/icons/home.svg" width="18" height="18" style="filter: invert(1);" alt="Home"> Home
       </a>
       <div class="dropdown">
