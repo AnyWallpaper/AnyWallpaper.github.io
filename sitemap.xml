@@ -70,6 +70,17 @@
   </url>
 
   <url>
+    <loc>https://anywallpaper.github.io/amoled/windows-10-live-wallpaper/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anywallpaper.github.io/amoled/windows-ball/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://anywallpaper.github.io/info/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
