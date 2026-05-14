@@ -29,6 +29,9 @@
 
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/category.css">
+  
+  <script src="../assets/js/components.js" defer></script>
+  <script src="/ads/ad-manager.js" defer></script>
 
   <style>
     :root {
@@ -62,31 +65,7 @@
 </head>
 <body>
 
-<header>
-  <div class="container navbar">
-    <a href="/" class="logo">Any<span>Wallpaper</span></a>
-
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      
-      <div class="dropdown">
-        <a class="dropbtn">Categories <span style="font-size: 12px; margin-left: 4px;">▼</span></a>
-        <div class="dropdown-content">
-          <a href="/anime/">Anime</a>
-          <a href="/nature/">Nature</a>
-          <a href="/gaming/">Gaming</a>
-          <a href="/space/">Space</a>
-          <a href="/cyberpunk/">Cyberpunk</a>
-          <a href="/fantasy/">Fantasy</a>
-          <a href="/car-and-vehicle/" style="color: var(--accent); font-weight: bold;">Vehicle</a>
-          <a href="/amoled/">AMOLED</a>
-        </div>
-      </div>
-      
-      <a href="/info/contact/">Contact</a>
-    </nav>
-  </div>
-</header>
+<header></header>
 
 <main>
   <section class="category-hero" style="background-image: url('../assets/images/categories/car-and-vehicle-thumb.jpg');">
@@ -100,23 +79,68 @@
     </div>
   </section>
 
-  <section>
+  <div class="container">
+    <div class="ad-native-placeholder" style="margin-top: 40px; margin-bottom: 20px; text-align: center;"></div>
+  </div>
+
+  <section style="padding-top: 40px;">
     <div class="container">
       <h2 class="section-title">Latest Car Wallpapers</h2>
       <p class="section-description">
         Discover cinematic automotive live wallpapers optimized for desktop and gaming setups.
       </p>
 
-      <div class="wallpaper-grid">
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0; background: #0d0d0d; border-radius: 20px; border: 1px dashed rgba(255,255,255,0.1);">
-          <p style="font-size: 22px; color: var(--text-muted);">More premium 1080p Vehicle wallpapers are uploading soon...</p>
-          <p style="margin-top: 10px; color: #777;">Stay tuned!</p>
+      <div class="wallpaper-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+        
+        <a href="/car-and-vehicle/outrun-trailblazer/" class="wallpaper-card">
+          <div class="wallpaper-image">
+            <img src="/car-and-vehicle/outrun-trailblazer/thumb.jpg" alt="OutRun Trailblazer Neon Car Live Wallpaper">
+          </div>
+          <div class="wallpaper-content">
+           <h3 class="card-title">OutRun Trailblazer</h3>
+          </div>
+        </a>
+
+        <a href="/car-and-vehicle/outrun-dmc-delorean/" class="wallpaper-card">
+          <div class="wallpaper-image">
+            <img src="/car-and-vehicle/outrun-dmc-delorean/thumb.jpg" alt="OutRun DMC DeLorean Live Wallpaper">
+          </div>
+          <div class="wallpaper-content">
+           <h3 class="card-title">OutRun DMC DeLorean</h3>
+          </div>
+        </a>
+
+        <a href="/car-and-vehicle/nissan-gtr-night-rain/" class="wallpaper-card">
+          <div class="wallpaper-image">
+            <img src="/car-and-vehicle/nissan-gtr-night-rain/thumb.jpg" alt="Nissan GTR Night Rain Live Wallpaper">
+          </div>
+          <div class="wallpaper-content">
+           <h3 class="card-title">Nissan GTR Night Rain</h3>
+          </div>
+        </a>
+
+        <a href="/car-and-vehicle/car-gif-live-wallpaper/" class="wallpaper-card">
+          <div class="wallpaper-image">
+            <img src="/car-and-vehicle/car-gif-live-wallpaper/thumb.jpg" alt="Car Night City Live Wallpaper">
+          </div>
+          <div class="wallpaper-content">
+           <h3 class="card-title">Car Night City</h3>
+          </div>
+        </a>
+
+        <div style="text-align: center; padding: 40px 20px; background: #0d0d0d; border-radius: 20px; border: 1px dashed rgba(255,255,255,0.1); display: flex; flex-direction: column; justify-content: center;">
+          <p style="font-size: 18px; color: var(--text-muted);">More premium 1080p Vehicle wallpapers uploading soon...</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section>
+  <div class="container">
+    <div class="ad-banner-placeholder" style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: center; overflow: hidden;"></div>
+  </div>
+
+  <section style="padding-top: 40px;">
     <div class="container">
       <div class="seo-content">
         <h2>Download Premium Car Live Wallpapers</h2>
@@ -124,7 +148,7 @@
           AnyWallpaper provides high-quality car and vehicle live wallpapers for Windows PCs and gaming setups. Explore animated racing wallpapers, cinematic supercars, drifting scenes, and futuristic automotive environments.
         </p>
         <p>
-          All wallpapers are strictly optimized for performance and available in lag-free Full HD 1080p resolution. This ensures your desktop looks incredibly sharp without sacrificing your PC's gaming performance or dropping frame rates. Browse premium desktop wallpapers inspired by hypercars and modern luxury vehicles.
+          All wallpapers are strictly optimized for performance and available in lag-free Full HD 1080p resolution. This ensures your desktop looks incredibly sharp without sacrificing your PC's gaming performance or dropping frame rates.
         </p>
         <p>
           New automotive live wallpapers are added regularly to keep your desktop setup looking premium. 100% Free and no watermarks!
@@ -134,41 +158,7 @@
   </section>
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3 class="logo">Any<span>Wallpaper</span></h3>
-        <p style="margin-top:20px;color:#9d9d9d;line-height:1.8;">
-          Premium 1080p animated wallpapers for desktop PCs and gaming setups. Lightweight, fast, and completely free.
-        </p>
-      </div>
-
-      <div>
-        <h3 style="margin-bottom: 20px; color: #fff;">Quick Links</h3>
-        <div class="footer-links">
-          <a href="/">Home</a>
-          <a href="/anime/">Anime</a>
-          <a href="/gaming/">Gaming</a>
-          <a href="/car-and-vehicle/">Vehicle</a>
-        </div>
-      </div>
-
-      <div>
-        <h3 style="margin-bottom: 20px; color: #fff;">Information</h3>
-        <div class="footer-links">
-          <a href="/info/privacy/">Privacy Policy</a>
-          <a href="/info/terms/">Terms & Conditions</a>
-          <a href="/info/contact/">Contact</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      © 2026 AnyWallpaper. All Rights Reserved.
-    </div>
-  </div>
-</footer>
+<footer></footer>
 
 <script src="../assets/js/app.js"></script>
 

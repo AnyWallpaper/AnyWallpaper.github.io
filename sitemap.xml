@@ -81,6 +81,27 @@
   </url>
 
   <url>
+    <loc>https://anywallpaper.github.io/car-and-vehicle/car-gif-live-wallpaper/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anywallpaper.github.io/car-and-vehicle/nissan-gtr-night-rain/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anywallpaper.github.io/car-and-vehicle/outrun-trailblazer/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anywallpaper.github.io/car-and-vehicle/outrun-dmc-delorean/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://anywallpaper.github.io/info/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
